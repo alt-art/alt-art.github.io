@@ -85,6 +85,17 @@ main > div {
     }
 }
 
+.stats {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.stats > img {
+    height: 180px;
+    padding: 7px;
+}
+
 .articles {
     width: 100%;
     margin-bottom: 60px;
@@ -313,6 +324,12 @@ button.btn.selected:active {
     .details {
         padding: 10px 10px;
     }
+
+    .stats {
+        display: block;
+        width: 100%;
+    }
+
 }
 
 @media(max-width: 640px) {
