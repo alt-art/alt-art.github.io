@@ -1,3 +1,8 @@
+/*
+Author: Carlgi Henrique, @KugiHaito
+Github: https://github.com/KugiHaito
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /*  Extra Especifications  */
@@ -34,6 +39,7 @@ body {
     overflow-x: hidden;
     background: #181A1B;
     color: #cecece;
+    height: 120vh;
 }
 
 h1 {
@@ -78,6 +84,20 @@ main > div {
     main > article {
         padding: 0 20px;
     }
+}
+
+.articles {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.articles > a > article {
+    padding: 1rem;
+}
+
+.articles > a > article > h3 {
+    color: var(--theme-color);
 }
 
 .details {
@@ -315,6 +335,11 @@ button.btn.selected:active {
     .bottom-buttons {
         grid-template-columns: 1fr;
     }
+
+    .articles {
+        grid-template-columns: 1fr;
+    }
+
     .bottom-buttons > a {
         padding: 10px 20px;
         font-size: 14px;
