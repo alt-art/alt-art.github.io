@@ -1,7 +1,17 @@
 let articles = document.querySelector(".articles");
+let avatar_img = document.querySelector(".avatar")
+
+fetch("https://api.github.com/users/alt-art").then(res => {
+    return res.json();
+}).then(user => {
+    avatar_img.src = user.avatar_url;
+}).catch(reason => {
+    console.error("Error when requesting avatar image from alt-art", reason);
+})
+
 
 fetch("https://api.github.com/users/alt-art/repos?type=owner&sort=created").then(res => {
-    return res.json()
+    return res.json();
 }).then(data => {
     data.forEach(repo => {
         let link = document.createElement("a");
