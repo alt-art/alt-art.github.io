@@ -80,6 +80,27 @@ main > div {
     }
 }
 
+.details {
+    padding: 20px 20px;
+    margin: 10px 0;
+    font-size: 14px;
+    background: rgba(0, 0, 0, .3);
+    font-family: monospace;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.details .item .material-icons {
+    font-size: 19px;
+    padding: 0px 6px;
+}
+
+.details .item {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
 .content {
     padding: 0 20px;
 }
@@ -188,12 +209,6 @@ main > div {
     transition: linear .2s;
 }
 
-.token {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 pre {
     padding: 20px 40px;
     margin: 10px 0;
@@ -263,6 +278,10 @@ button.btn.selected:active {
     pre {
         padding: 10px 20px;
     }
+
+    .details {
+        padding: 10px 10px;
+    }
 }
 
 @media(max-width: 640px) {
@@ -288,6 +307,11 @@ button.btn.selected:active {
         padding: 10px 15px;
     }
 
+    .details {
+        font-size: 12px;
+        padding: 10px 10px;
+    }
+
     .bottom-buttons {
         grid-template-columns: 1fr;
     }
@@ -310,6 +334,11 @@ button.btn.selected:active {
         font-size: 10px;
         padding: 10px;
     }
+
+    .details {
+        font-size: 10px;
+        padding: 10px;
+    }
 }
 
 @media(max-width:  280px) {
@@ -326,6 +355,10 @@ button.btn.selected:active {
     }
 
     pre {
+        padding: 10px;
+    }
+
+    .details {
         padding: 10px;
     }
 }
