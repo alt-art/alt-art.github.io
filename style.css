@@ -39,7 +39,6 @@ body {
     overflow-x: hidden;
     background: #181A1B;
     color: #cecece;
-    height: 120vh;
 }
 
 h1 {
@@ -88,6 +87,7 @@ main > div {
 
 .articles {
     width: 100%;
+    margin-bottom: 60px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
