@@ -74,21 +74,20 @@ main > div {
 @media (max-width: 996px) {
     main > section,
     main > article {
-        padding: 0 5rem;
+        padding: 0 1rem;
     }
 }
 
 @media (max-width: 500px) {
     main > section,
     main > article {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 }
 
 .stats {
     display: flex;
     justify-content: center;
-    padding: 0px;
 }
 
 .stats > img {
@@ -309,6 +308,11 @@ button.btn.selected:active {
         font-size: 96px;
         line-height: 4rem;
     }
+    .stats {
+        display: block;
+        width: 100%;
+        padding: 0px;
+    }
 }
 
 @media(max-width: 768px) {
@@ -324,12 +328,6 @@ button.btn.selected:active {
     .details {
         padding: 10px 10px;
     }
-
-    .stats {
-        display: block;
-        width: 100%;
-    }
-
 }
 
 @media(max-width: 640px) {
