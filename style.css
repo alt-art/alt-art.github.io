@@ -282,7 +282,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    padding: 20px 40px;
+    padding: 10px 20px;
 }
 .btn.selected {
     background: var(--theme-color);
