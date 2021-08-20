@@ -15,9 +15,11 @@ Github: https://github.com/KugiHaito
     width: 8px;
     height: 5px;
 }
+
 ::-webkit-scrollbar-track {
     background-color: #181A1B;
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--theme-color);
 }
@@ -45,7 +47,8 @@ h1 {
     margin: 10px 0;
 }
 
-a, button {
+a,
+button {
     background-color: none;
     text-decoration: none;
     color: inherit;
@@ -58,7 +61,7 @@ a:focus {
 
 img {
     max-width: 100%;
-    align-self: flex-start;
+    align-self: center;
 }
 
 /*  Layout  */
@@ -72,8 +75,9 @@ main > div {
 }
 
 @media (max-width: 996px) {
-    main > section,
-    main > article {
+
+    main>section,
+    main>article {
         padding: 0 1rem;
     }
 }
