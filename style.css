@@ -119,18 +119,16 @@ img {
     color: var(--theme-color);
 }
 
-.contact {
-    display: block;
-}
-
 .avatar {
+    float: left;
     width: 70px;
     height: 70px;
-    border-radius: 5%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .details {
-    display: flex;
     padding: 20px 20px;
     margin: 10px 0;
     font-size: 16px;
@@ -138,6 +136,14 @@ img {
     font-family: monospace;
     border-radius: 5px;
     overflow-x: auto;
+}
+
+.details > address {
+    clear: both;
+}
+
+.details > header p {
+    font-size: 17px;
 }
 
 .details .item .material-icons {
@@ -148,7 +154,7 @@ img {
 .details .item {
     display: flex;
     align-items: center;
-    padding: 5px 10px;
+    padding: 5px 0px;
 }
 
 .content {
@@ -235,20 +241,10 @@ img {
 
 .subtitle-1 {
     font-size: 18px;
-    font-style: normal;
-}
-
-.subtitle-2 {
-    font-size: 16px;
 }
 
 .subtitle-3 {
     font-size: 14px;
-}
-
-.overline,
-.small-text {
-    font-size: 10px;
 }
 
 .text-light {
@@ -257,14 +253,6 @@ img {
 
 .text-monospace {
     font-family: monospace;
-}
-
-.text-upper {
-    text-transform: uppercase;
-}
-
-.text-lower {
-    text-transform: lowercase;
 }
 
 .color-theme {
@@ -285,9 +273,6 @@ footer {
     display: flex;
     background: #121212;
     justify-content: stretch;
-}
-
-.fixed-footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -346,8 +331,8 @@ footer {
         font-size: 62px;
     }
 
-    .subtitle-2 {
-        font-size: 12px;
+    .subtitle-1 {
+        font-size: 14px;
     }
 
     .tag {
@@ -400,6 +385,10 @@ footer {
         font-size: 10px;
         padding: 10px;
     }
+
+    .details > header p {
+        font-size: 14px;
+    }
 }
 
 @media(max-width: 280px) {
@@ -407,8 +396,8 @@ footer {
         font-size: 48px;
     }
 
-    .subtitle-2 {
-        font-size: 10px;
+    .subtitle-1 {
+        font-size: 12px;
     }
 
     .tag {
