@@ -23,6 +23,12 @@ fetch("https://api.github.com/users/alt-art/repos?type=owner&sort=created").then
         link.href = repo.html_url;
         article.append(title);
         article.append(description);
+        if (repo.language != null) {
+            let tag = document.createElement("span");
+            tag.className = "tag";
+            tag.innerText = repo.language;
+            article.append(tag);
+        }
         link.append(article);
         link.target = "_blank"
         articles.append(link);
