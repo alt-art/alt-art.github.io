@@ -103,7 +103,7 @@ img {
     margin-bottom: 60px;
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .articles > a {
@@ -294,6 +294,18 @@ footer {
 
 .bottom-buttons .material-icons {
     margin: 0 5px;
+}
+
+@media (max-width: 1920px) {
+    .articles {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 1400px) {
+    .articles {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /*  Responsive by Media Queries */
