@@ -1,5 +1,5 @@
 let articles = document.querySelector(".articles");
-let avatar_img = document.querySelector(".avatar")
+let avatar_img = document.querySelector(".avatar");
 
 fetch("https://api.github.com/users/alt-art").then(res => {
     return res.json();
@@ -7,7 +7,7 @@ fetch("https://api.github.com/users/alt-art").then(res => {
     avatar_img.src = user.avatar_url;
 }).catch(reason => {
     console.error("Error when requesting avatar image from alt-art", reason);
-})
+});
 
 
 fetch("https://api.github.com/users/alt-art/repos?type=owner&sort=created").then(res => {
@@ -30,9 +30,10 @@ fetch("https://api.github.com/users/alt-art/repos?type=owner&sort=created").then
             article.append(tag);
         }
         link.append(article);
-        link.target = "_blank"
+        link.target = "_blank";
+        link.rel = "noreferrer";
         articles.append(link);
     })
 }).catch(reason => {
     console.error("Error when requesting repos from alt-art", reason);
-})
+});
