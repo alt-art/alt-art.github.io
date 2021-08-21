@@ -2,6 +2,6 @@
 
 User-agent: *
 
-Disallow: /lyrs/token/
+Disallow: /lyrs/token
 
 Sitemap: https://alt-art.github.io/sitemap.xml
