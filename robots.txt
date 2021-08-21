@@ -1,0 +1,7 @@
+# robots.txt for https://alt-art.github.com/
+
+User-agent: *
+
+Disallow: /lyrs/token/
+
+Sitemap: https://alt-art.github.io/sitemap.xml
