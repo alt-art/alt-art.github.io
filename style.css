@@ -134,7 +134,7 @@ img {
 .details {
     padding: 20px 20px;
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 17px;
     background: rgba(0, 0, 0, .3);
     font-family: monospace;
     border-radius: 5px;
@@ -143,10 +143,6 @@ img {
 
 section > address {
     clear: both;
-}
-
-.details > header p {
-    font-size: 17px;
 }
 
 .details .item .material-icons {
