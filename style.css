@@ -61,6 +61,7 @@ a:focus {
 
 /*  Layout  */
 main > section,
+header,
 main > article {
     padding: 0 10rem;
 }
@@ -72,6 +73,7 @@ main > div {
 @media (max-width: 996px) {
 
     main>section,
+    header,
     main>article {
         padding: 0 1rem;
     }
@@ -83,6 +85,7 @@ img {
 
 @media (max-width: 500px) {
     main > section,
+    header,
     main > article {
         padding: 0 10px;
     }
@@ -131,19 +134,15 @@ img {
 .details {
     padding: 20px 20px;
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 17px;
     background: rgba(0, 0, 0, .3);
     font-family: monospace;
     border-radius: 5px;
     overflow-x: auto;
 }
 
-.details > address {
+section > address {
     clear: both;
-}
-
-.details > header p {
-    font-size: 17px;
 }
 
 .details .item .material-icons {
@@ -356,12 +355,12 @@ footer {
     }
 
     pre {
-        font-size: 12px;
+        font-size: 14px;
         padding: 10px 15px;
     }
 
     .details {
-        font-size: 12px;
+        font-size: 14px;
         padding: 10px 10px;
     }
 
@@ -396,10 +395,6 @@ footer {
     .details {
         font-size: 10px;
         padding: 10px;
-    }
-
-    .details > header p {
-        font-size: 14px;
     }
 }
 
