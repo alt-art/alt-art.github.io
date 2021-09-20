@@ -20,7 +20,19 @@
 </head>
 
 <body>
-    <header class="content-flex">
+    <header">
+        <nav class="fixed-header">
+            <div class="top-buttons">
+                <a href="https://github.com/alt-art" class="btn">
+                    <span class="material-icons">visibility</span> View my github profile
+                </a>
+                <a href="#projects" class="btn">
+                    <span class="material-icons">dashboard</span> Projects
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="content-flex">
         <section class="content">
             <h1 class="headline-1"><b>alt-art</b></h1>
             <h2 class="subtitle-1 text-light text-monospace">
@@ -43,26 +55,11 @@
                 </address>
             </section>
         </section>
-    </header>
-    <main>
-        <section>
-            <div class="stats">
-                <img src="https://github-readme-stats.vercel.app/api?username=alt-art&count_private=true&show_icons=true&theme=dracula&line_height=20" alt="Github Status">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=alt-art&theme=dracula&layout=compact" alt="Top languages">
-            </div>
-        </section>
-        <section class="content-flex">
+        <section id="projects" class="content-flex">
             <h4 class="lead">Projects</h4>
             <div class="articles"></div>
         </section>
     </main>
-    <footer class="fixed-footer">
-        <div class="bottom-buttons">
-            <a href="https://github.com/alt-art" class="btn">
-                <span class="material-icons">visibility</span> View my github profile
-            </a>
-        </div>
-    </footer>
 </body>
 
 </html>

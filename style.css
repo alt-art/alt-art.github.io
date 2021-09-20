@@ -35,6 +35,7 @@ Github: https://github.com/KugiHaito
     outline: none;
     box-sizing: border-box;
     font-family: Roboto, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -60,9 +61,8 @@ a:focus {
 }
 
 /*  Layout  */
-main > section,
-header,
-main > article {
+main {
+    margin-top: 58px;
     padding: 0 10rem;
 }
 
@@ -71,10 +71,7 @@ main > div {
 }
 
 @media (max-width: 996px) {
-
-    main>section,
-    header,
-    main>article {
+    main {
         padding: 0 1rem;
     }
 }
@@ -84,26 +81,14 @@ img {
 }
 
 @media (max-width: 500px) {
-    main > section,
-    header,
-    main > article {
+    main {
         padding: 0 10px;
     }
 }
 
-.stats {
-    display: flex;
-    justify-content: center;
-}
-
-.stats > img {
-    height: 180px;
-    padding: 7px;
-}
-
 .articles {
     width: 100%;
-    margin-bottom: 60px;
+    padding-bottom: 20px;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(5, 1fr);
@@ -112,6 +97,7 @@ img {
 .articles > a {
     border: solid 2px var(--theme-color);
     border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .articles > a > article {
@@ -234,6 +220,7 @@ section > address {
 }
 
 .lead {
+    padding: 20px 0;
     font-size: 1.45rem;
     font-weight: 300;
 }
@@ -267,20 +254,16 @@ section > address {
     border-radius: 5px;
 }
 
-footer {
+.fixed-header {
     width: 100%;
-    display: flex;
     background: #121212;
-    justify-content: stretch;
     position: fixed;
-    bottom: 0;
-    left: 0;
+    top: 0;
 }
 
-.bottom-buttons {
+.top-buttons {
+    display: flex;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
 }
 
 .btn {
@@ -291,7 +274,7 @@ footer {
     padding: 10px 20px;
 }
 
-.bottom-buttons .material-icons {
+.top-buttons .material-icons {
     margin: 0 5px;
 }
 
@@ -312,12 +295,6 @@ footer {
     .headline-1 {
         font-size: 96px;
         line-height: 4rem;
-    }
-
-    .stats {
-        display: block;
-        width: 100%;
-        padding: 0px;
     }
 }
 
@@ -363,18 +340,17 @@ footer {
         font-size: 14px;
         padding: 10px 10px;
     }
-
-    .bottom-buttons {
-        grid-template-columns: 1fr;
-    }
-
     .articles {
         grid-template-columns: 1fr;
     }
 
-    .bottom-buttons>a {
+    .top-buttons>a {
         padding: 10px 20px;
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    main {
+        padding-top: 30px;
     }
 }
 
