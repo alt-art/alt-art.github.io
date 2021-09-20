@@ -10,11 +10,11 @@ fetch("https://api.github.com/users/alt-art").then(res => {
 });
 
 
-fetch("https://api.github.com/users/alt-art/repos?type=owner&sort=created").then(res => {
+fetch("https://api.github.com/users/alt-art/repos?type=owner&sort=updated").then(res => {
     return res.json();
 }).then(data => {
     data.forEach(repo => {
-        if (!repo.fork){
+        if (!repo.fork) {
             let link = document.createElement("a");
             let article = document.createElement("article");
             let title = document.createElement("h3");
