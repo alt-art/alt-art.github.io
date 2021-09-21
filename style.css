@@ -40,8 +40,13 @@ Github: https://github.com/KugiHaito
 
 body {
     overflow-x: hidden;
-    background: #181A1B;
+    background: url("./simbol.svg") no-repeat #181A1B right top;
     color: #cecece;
+}
+
+.content {
+    background-color: #181A1B;
+    max-width: 600px;
 }
 
 h1 {
@@ -62,7 +67,7 @@ a:focus {
 
 /*  Layout  */
 main {
-    margin-top: 58px;
+    margin-top: 30px;
     padding: 0 10rem;
 }
 
@@ -97,7 +102,7 @@ img {
 .articles > a {
     border: solid 2px var(--theme-color);
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #111213;
 }
 
 .articles > a > article {
@@ -121,7 +126,7 @@ img {
     padding: 20px 20px;
     margin: 10px 0;
     font-size: 17px;
-    background: rgba(0, 0, 0, .3);
+    background-color: #111213;
     font-family: monospace;
     border-radius: 5px;
     overflow-x: auto;
@@ -309,6 +314,10 @@ section > address {
 }
 
 @media(max-width: 640px) {
+    body {
+        background: #181A1B;
+    }
+
     .headline-1 {
         line-height: 2rem;
         font-size: 62px;
