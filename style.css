@@ -303,11 +303,6 @@ section > address {
         font-size: 80px;
         line-height: 3rem;
     }
-
-    pre {
-        padding: 10px 20px;
-    }
-
     .details {
         padding: 10px 10px;
     }
@@ -329,11 +324,6 @@ section > address {
 
     .lead {
         font-size: 1rem;
-    }
-
-    pre {
-        font-size: 14px;
-        padding: 10px 15px;
     }
 
     .details {
@@ -363,11 +353,6 @@ section > address {
         font-size: 12px;
     }
 
-    pre {
-        font-size: 10px;
-        padding: 10px;
-    }
-
     .details {
         font-size: 10px;
         padding: 10px;
@@ -385,10 +370,6 @@ section > address {
 
     .tag {
         font-size: 8px;
-    }
-
-    pre {
-        padding: 10px;
     }
 
     .details {
