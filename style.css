@@ -81,8 +81,9 @@ main > div {
     }
 }
 
-img {
+.avatar > img {
     max-width: 100%;
+    border-radius: 5px;
 }
 
 @media (max-width: 500px) {
@@ -117,9 +118,9 @@ img {
     float: left;
     width: 70px;
     height: 70px;
+    background-color: #181A1B;
     margin-right: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
 }
 
 .details {
