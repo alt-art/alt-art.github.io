@@ -1,7 +1,7 @@
-# robots.txt for https://alt-art.github.com/
+# robots.txt for https://www.altart.tk/
 
 User-agent: *
 
 Disallow: /lyrs/token
 
-Sitemap: https://alt-art.github.io/sitemap.xml
+Sitemap: https://www.altart.tk/sitemap.xml
