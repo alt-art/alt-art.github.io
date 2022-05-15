@@ -3,7 +3,7 @@ Author: Carlgi Henrique, @KugiHaito
 Github: https://github.com/KugiHaito
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap");
 
 /*  Extra Especifications  */
 :root {
@@ -199,7 +199,6 @@ section > address {
 /* Font Sizes */
 .headline-1 {
   font-size: 140px;
-  font-weight: 200;
   line-height: 6rem;
 }
 
