@@ -44,6 +44,7 @@ const Arrow: React.FC = () => {
   return (
     <ArrowStyled
       ref={arrowRef}
+      aria-label="Scroll down"
       onClick={() => {
         window.scrollTo({
           top: arrowRef.current?.offsetTop,
