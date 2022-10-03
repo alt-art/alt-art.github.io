@@ -21,7 +21,7 @@ const SocialLink = styled.a`
 
 const Social: React.FC<Props> = ({ label, icon, link }: Props): JSX.Element => {
   return (
-    <SocialLink href={link}>
+    <SocialLink href={link} target="_blank" rel="noopener noreferrer">
       <Icon path={icon} size={1} />
       &nbsp;
       <p>{label}</p>
