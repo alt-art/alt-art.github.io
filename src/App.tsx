@@ -11,13 +11,16 @@ import { mdiGithub, mdiLinkedin, mdiEmail } from '@mdi/js'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Slide from './components/Slide'
+import { QueryClient, QueryClientProvider } from 'react-query'
+
+const queryClient = new QueryClient()
 
 function App (): JSX.Element {
   React.useEffect(() => {
     Aos.init({ duration: 1000 })
   }, [])
   return (
-    <div>
+    <QueryClientProvider client={queryClient}>
       <StyledBackground />
       <View arrow>
         <Title data-aos="fade-right">Pedro Mendes</Title>
@@ -43,7 +46,7 @@ function App (): JSX.Element {
           link="mailto:pedromendescraft@gmail.com"
         />
       </Footer>
-    </div>
+    </QueryClientProvider>
   )
 }
 

@@ -1,15 +1,10 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 import AliceCarousel from 'react-alice-carousel'
+import { useQuery } from 'react-query'
+import ReactLoading from 'react-loading'
+import { getRepositories } from '../utils/api'
 import Card from './Card'
-import axios from 'axios'
-import { getMetaImage } from '../utils/scraping'
-
-interface GithubAPIResponse {
-  name: string
-  description: string
-  html_url: string
-}
 
 const SlideStyle = styled.div`
   position: sticky;
@@ -29,7 +24,7 @@ const SlideStyle = styled.div`
   }
 `
 
-const Error = styled.div`
+const Center = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,76 +76,69 @@ const SlideButton = styled.button<ButtonProps>`
 
 const Slide = (): JSX.Element => {
   const [activeIndex, setActiveIndex] = React.useState(0)
-  const [error, setError] = React.useState(false)
-  const [items, setData] = React.useState<React.ReactNode[]>([])
-  React.useEffect(() => {
-    axios
-      .get('https://api.github.com/users/alt-art/repos', {
-        params: {
-          sort: 'updated',
-          type: 'owner'
-        }
-      })
-      .then((result: { data: GithubAPIResponse[] }) => {
-        const metaImagePromises = result.data.map(
-          async (repo) => await getMetaImage(repo.html_url)
-        )
-        Promise.all(metaImagePromises)
-          .then((metaImages) => {
-            const repos = result.data.map((repo, index: number) => ({
-              ...repo,
-              metaImage: metaImages[index]
-            }))
-            setData(
-              repos.map((item, i: number) => (
-                <Card
-                  key={i}
-                  title={item.name}
-                  desc={item.description}
-                  image={item.metaImage}
-                  link={item.html_url}
-                />
-              ))
-            )
-          })
-          .catch(() => {
-            setError(true)
-          })
-      })
-      .catch(() => {
-        setError(true)
-      })
-  }, [])
+  const [items, setItems] = React.useState<ReactNode[]>([])
+  const { data: repos, status } = useQuery(
+    'repos',
+    getRepositories
+  )
 
-  return (
-    <SlideStyle>
-      {activeIndex > 0 && (
-        <SlideButton onClick={() => setActiveIndex(activeIndex - 1)} side="left" />
-      )}
-      {!error
-        ? (
-        <AliceCarousel
-          mouseTracking
-          autoWidth
-          items={items}
-          disableButtonsControls
-          disableDotsControls
-          activeIndex={activeIndex}
-          onSlideChanged={(e) => setActiveIndex(e.item)}
-          paddingLeft={60}
-          paddingRight={20}
-        />
-          )
-        : (
-        <Error>
+  React.useEffect(() => {
+    if (status === 'success') {
+      setItems(
+        repos.map((repo) => (
+          <Card
+            key={repo.html_url}
+            title={repo.name}
+            desc={repo.description}
+            link={repo.html_url}
+            image={repo.metaImage}
+          />
+        ))
+      )
+    }
+  }, [repos, status])
+
+  if (!repos) {
+    return (
+      <SlideStyle>
+        <Center>
+          <ReactLoading type="bars" color="#dd6387" height={50} width={50} />
+        </Center>
+      </SlideStyle>
+    )
+  }
+
+  if (status === 'error') {
+    return (
+      <SlideStyle>
+        <Center>
           <p>Sorry, something went wrong.</p>
           <p>
             <a href="https://github.com/alt-art?tab=repositories">
               You can check my projects on GitHub
             </a>
           </p>
-        </Error>
-          )}
+        </Center>
+      </SlideStyle>
+    )
+  }
+
+  return (
+    <SlideStyle>
+      {activeIndex > 0 && (
+        <SlideButton onClick={() => setActiveIndex(activeIndex - 1)} side="left" />
+      )}
+      <AliceCarousel
+        mouseTracking
+        autoWidth
+        items={items}
+        disableButtonsControls
+        disableDotsControls
+        activeIndex={activeIndex}
+        onSlideChanged={(e) => setActiveIndex(e.item)}
+        paddingLeft={60}
+        paddingRight={20}
+      />
       {activeIndex < items.length - 1 && (
         <SlideButton onClick={() => setActiveIndex(activeIndex + 1)} side="right" />
       )}
