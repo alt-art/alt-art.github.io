@@ -126,7 +126,7 @@ const Slide = (): JSX.Element => {
   return (
     <SlideStyle>
       {activeIndex > 0 && (
-        <SlideButton onClick={() => setActiveIndex(activeIndex - 1)} side="left" />
+        <SlideButton onClick={() => setActiveIndex(activeIndex - 1)} side="left" aria-label="Previous"/>
       )}
       <AliceCarousel
         mouseTracking
@@ -140,7 +140,7 @@ const Slide = (): JSX.Element => {
         paddingRight={20}
       />
       {activeIndex < items.length - 1 && (
-        <SlideButton onClick={() => setActiveIndex(activeIndex + 1)} side="right" />
+        <SlideButton onClick={() => setActiveIndex(activeIndex + 1)} side="right" aria-label="Next"/>
       )}
     </SlideStyle>
   )
