@@ -91,7 +91,7 @@ const Slide = (): JSX.Element => {
             title={repo.name}
             desc={repo.description}
             link={repo.html_url}
-            image={repo.metaImage}
+            image={repo.thumb}
           />
         ))
       )
