@@ -25,8 +25,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      VITE_REPO_API: ${{ secrets.VITE_REPO_API }}
-      NODE_ENV: production
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,6 +32,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build
+        env:
+          VITE_REPO_API: ${{ secrets.VITE_REPO_API }}
         run: yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v2
