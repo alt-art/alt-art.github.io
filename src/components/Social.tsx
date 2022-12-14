@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Icon } from '@mdi/react'
+import React from 'react';
+import styled from 'styled-components';
+import { Icon } from '@mdi/react';
 
 interface Props {
   label: string
@@ -17,7 +17,7 @@ const SocialLink = styled.a`
   &:nth-child(even) {
     color: white;
   }
-`
+`;
 
 const Social: React.FC<Props> = ({ label, icon, link }: Props): JSX.Element => {
   return (
@@ -26,7 +26,7 @@ const Social: React.FC<Props> = ({ label, icon, link }: Props): JSX.Element => {
       &nbsp;
       <p>{label}</p>
     </SocialLink>
-  )
-}
+  );
+};
 
-export default Social
+export default Social;

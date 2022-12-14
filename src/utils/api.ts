@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 interface Repository {
   name: string
@@ -8,12 +8,11 @@ interface Repository {
 }
 
 export async function getRepositories (): Promise<Repository[]> {
-  console.log(import.meta.env.VITE_REPO_API)
   if (!import.meta.env.VITE_REPO_API) {
-    throw new Error('Repository data URL is not defined')
+    throw new Error('Repository data URL is not defined');
   }
   const repositories: Repository[] = (
     await axios.get(import.meta.env.VITE_REPO_API)
-  ).data
-  return repositories
+  ).data;
+  return repositories;
 }

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Desc = styled.p`
   max-width: 30rem;
@@ -9,6 +9,6 @@ const Desc = styled.p`
   @media (max-width: 768px) {
     padding: 0 2rem;
   }
-`
+`;
 
-export default Desc
+export default Desc;

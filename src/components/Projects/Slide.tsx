@@ -1,10 +1,10 @@
-import React, { ReactNode } from 'react'
-import styled from 'styled-components'
-import AliceCarousel from 'react-alice-carousel'
-import { useQuery } from 'react-query'
-import ReactLoading from 'react-loading'
-import { getRepositories } from '../utils/api'
-import Card from './Card'
+import { ReactNode, useState, useEffect } from 'react';
+import styled from 'styled-components';
+import AliceCarousel from 'react-alice-carousel';
+import { useQuery } from 'react-query';
+import ReactLoading from 'react-loading';
+import { getRepositories } from '../../utils/api';
+import Card from '../Card';
 
 const SlideStyle = styled.div`
   position: sticky;
@@ -22,7 +22,7 @@ const SlideStyle = styled.div`
     border: 2px solid #dd6387;
     border-radius: 0.5rem;
   }
-`
+`;
 
 const Center = styled.div`
   display: flex;
@@ -37,7 +37,7 @@ const Center = styled.div`
     color: #dd6387;
     text-decoration: none;
   }
-`
+`;
 
 interface ButtonProps {
   side: 'left' | 'right'
@@ -72,17 +72,17 @@ const SlideButton = styled.button<ButtonProps>`
   &:hover::before {
     transform: translateX(${(props) => (props.side === 'right' ? '10px' : '-10px')});
   }
-`
+`;
 
 const Slide = (): JSX.Element => {
-  const [activeIndex, setActiveIndex] = React.useState(0)
-  const [items, setItems] = React.useState<ReactNode[]>([])
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [items, setItems] = useState<ReactNode[]>([]);
   const { data: repos, status } = useQuery(
     'repos',
     getRepositories
-  )
+  );
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (status === 'success') {
       setItems(
         repos.map((repo) => (
@@ -94,9 +94,9 @@ const Slide = (): JSX.Element => {
             image={repo.thumb}
           />
         ))
-      )
+      );
     }
-  }, [repos, status])
+  }, [repos, status]);
 
   if (!repos) {
     return (
@@ -105,7 +105,7 @@ const Slide = (): JSX.Element => {
           <ReactLoading type="bars" color="#dd6387" height={50} width={50} />
         </Center>
       </SlideStyle>
-    )
+    );
   }
 
   if (status === 'error') {
@@ -120,7 +120,7 @@ const Slide = (): JSX.Element => {
           </p>
         </Center>
       </SlideStyle>
-    )
+    );
   }
 
   return (
@@ -143,7 +143,7 @@ const Slide = (): JSX.Element => {
         <SlideButton onClick={() => setActiveIndex(activeIndex + 1)} side="right" aria-label="Next"/>
       )}
     </SlideStyle>
-  )
-}
+  );
+};
 
-export default Slide
+export default Slide;

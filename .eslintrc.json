@@ -8,9 +8,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "standard-with-typescript"
-  ],
+  "extends": ["standard-with-typescript"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -20,6 +18,8 @@
   "plugins": ["react"],
   "rules": {
     "@typescript-eslint/triple-slash-reference": "off",
-    "@typescript-eslint/strict-boolean-expressions": "off"
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/semi": ["error", "always"],
+    "@typescript-eslint/space-before-function-paren": "off"
   }
 }

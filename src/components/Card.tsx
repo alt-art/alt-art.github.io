@@ -1,5 +1,4 @@
-import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const CardStyle = styled.a`
   display: flex;
@@ -17,24 +16,24 @@ const CardStyle = styled.a`
   &:hover {
     transform: scale(1.05);
   }
-`
+`;
 
 const CardImage = styled.img`
   width: auto;
   background-color: white;
   max-height: 100%;
   border-radius: 0.5rem 0.5rem 0 0;
-`
+`;
 
 const CardTitle = styled.h2`
   font-size: 1.5rem;
   margin: 0.5rem 1rem;
-`
+`;
 
 const CardDesc = styled.p`
   font-size: 1rem;
   margin: 0.5rem 1rem;
-`
+`;
 
 interface Props {
   image: string
@@ -50,7 +49,7 @@ const Card = ({ title, desc, image, link }: Props): JSX.Element => {
       <CardTitle>{title}</CardTitle>
       <CardDesc>{desc}</CardDesc>
     </CardStyle>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

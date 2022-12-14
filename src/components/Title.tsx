@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Title = styled.h1`
   display: inline-block;
@@ -11,6 +11,6 @@ const Title = styled.h1`
   @media (max-width: 768px) {
     padding: 0 2rem;
   }
-`
+`;
 
-export default Title
+export default Title;
