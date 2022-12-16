@@ -4,7 +4,7 @@ import View from '../View';
 
 export default function Projects(): JSX.Element {
   return (
-    <View id="projects" >
+    <View id="projects">
       <Title data-aos="fade-right">Projects</Title>
       <Slide />
     </View>

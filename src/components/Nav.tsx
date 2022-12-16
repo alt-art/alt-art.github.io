@@ -12,20 +12,20 @@ const NavStyle = styled.nav`
     text-decoration: none;
     color: #111213;
     padding: 0.5rem 1rem;
-    border: 2px solid #ffffff;
+    border: 2px solid #ffffffcc;
     transition: all 0.3s ease;
     background-color: #dd6387;
     &:hover {
-      background-color: #ffffff;
+      background-color: #ffffffcc;
     }
   }
-
 `;
 
 export default function Nav(): JSX.Element {
   return (
     <NavStyle data-aos="fade-down">
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
     </NavStyle>
   );

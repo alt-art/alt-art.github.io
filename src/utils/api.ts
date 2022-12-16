@@ -7,7 +7,7 @@ interface Repository {
   thumb: string
 }
 
-export async function getRepositories (): Promise<Repository[]> {
+export async function getRepositories(): Promise<Repository[]> {
   if (!import.meta.env.VITE_REPO_API) {
     throw new Error('Repository data URL is not defined');
   }

@@ -58,7 +58,7 @@ const SlideButton = styled.button<ButtonProps>`
   height: 100%;
   z-index: 1;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 0px;
     height: 0px;
@@ -70,17 +70,16 @@ const SlideButton = styled.button<ButtonProps>`
     transition: all 0.3s ease;
   }
   &:hover::before {
-    transform: translateX(${(props) => (props.side === 'right' ? '10px' : '-10px')});
+    transform: translateX(
+      ${(props) => (props.side === 'right' ? '10px' : '-10px')}
+    );
   }
 `;
 
 const Slide = (): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [items, setItems] = useState<ReactNode[]>([]);
-  const { data: repos, status } = useQuery(
-    'repos',
-    getRepositories
-  );
+  const { data: repos, status } = useQuery('repos', getRepositories);
 
   useEffect(() => {
     if (status === 'success') {
@@ -126,7 +125,11 @@ const Slide = (): JSX.Element => {
   return (
     <SlideStyle>
       {activeIndex > 0 && (
-        <SlideButton onClick={() => setActiveIndex(activeIndex - 1)} side="left" aria-label="Previous"/>
+        <SlideButton
+          onClick={() => setActiveIndex(activeIndex - 1)}
+          side="left"
+          aria-label="Previous"
+        />
       )}
       <AliceCarousel
         mouseTracking
@@ -140,7 +143,11 @@ const Slide = (): JSX.Element => {
         paddingRight={20}
       />
       {activeIndex < items.length - 1 && (
-        <SlideButton onClick={() => setActiveIndex(activeIndex + 1)} side="right" aria-label="Next"/>
+        <SlideButton
+          onClick={() => setActiveIndex(activeIndex + 1)}
+          side="right"
+          aria-label="Next"
+        />
       )}
     </SlideStyle>
   );

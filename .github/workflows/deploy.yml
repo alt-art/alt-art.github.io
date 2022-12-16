@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Uploads the build directory to the artifact
-          path: 'dist'
+          path: "dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

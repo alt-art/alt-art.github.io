@@ -22,17 +22,21 @@ const FooterStyle = styled.footer`
 export default function Footer(): JSX.Element {
   return (
     <FooterStyle>
-        <Social label="alt-art" icon={mdiGithub} link="https://github.com/alt-art" />
-        <Social
-          label="Linkedin"
-          icon={mdiLinkedin}
-          link="https://www.linkedin.com/in/altart/"
-        />
-        <Social
-          label="Email"
-          icon={mdiEmail}
-          link="mailto:pedromendescraft@gmail.com"
-        />
-      </FooterStyle>
+      <Social
+        label="alt-art"
+        icon={mdiGithub}
+        link="https://github.com/alt-art"
+      />
+      <Social
+        label="Linkedin"
+        icon={mdiLinkedin}
+        link="https://www.linkedin.com/in/altart/"
+      />
+      <Social
+        label="Email"
+        icon={mdiEmail}
+        link="mailto:pedromendescraft@gmail.com"
+      />
+    </FooterStyle>
   );
 }

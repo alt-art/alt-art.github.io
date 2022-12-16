@@ -5,7 +5,9 @@ import styled from 'styled-components';
 
 const Canvas: React.FC = () => {
   const setup = (p5: P5, canvasParentRef: Element): void => {
-    p5.createCanvas(p5.windowWidth, p5.windowHeight + 300).parent(canvasParentRef);
+    p5.createCanvas(p5.windowWidth, p5.windowHeight + 300).parent(
+      canvasParentRef
+    );
   };
   const draw = (p5: P5): void => {
     p5.background('#dd6387');
@@ -27,7 +29,9 @@ const Canvas: React.FC = () => {
     <Sketch
       setup={setup}
       draw={draw}
-      windowResized={(p5) => p5.resizeCanvas(p5.windowWidth, p5.windowHeight + 300)}
+      windowResized={(p5) =>
+        p5.resizeCanvas(p5.windowWidth, p5.windowHeight + 300)
+      }
     />
   );
 };

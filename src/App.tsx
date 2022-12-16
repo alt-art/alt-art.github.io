@@ -5,9 +5,10 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Intro from './components/Intro';
-import Projects from './components/Projects';
 import Nav from './components/Nav';
+import Intro from './components/Intro';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ function App(): JSX.Element {
         <Nav />
         <StyledBackground />
         <Intro />
+        <Skills />
         <Projects />
         <Footer />
       </QueryClientProvider>
