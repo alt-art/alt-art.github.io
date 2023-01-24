@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
-const CardStyle = styled.a`
+interface CardStyleProps {
+  center?: boolean
+}
+
+const CardStyle = styled.a<CardStyleProps>`
   display: flex;
   flex-direction: column;
+  justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};
   max-width: 340px;
   height: 340px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -44,8 +49,8 @@ interface Props {
 
 const Card = ({ title, desc, image, link }: Props): JSX.Element => {
   return (
-    <CardStyle href={link} target="_blank" rel="noreferrer">
-      <CardImage src={image} alt={title} />
+    <CardStyle href={link} target="_blank" rel="noreferrer" center={!image}>
+      {image && <CardImage src={image} alt={title} />}
       <CardTitle>{title}</CardTitle>
       <CardDesc>{desc}</CardDesc>
     </CardStyle>
