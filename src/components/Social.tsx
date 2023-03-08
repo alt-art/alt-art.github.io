@@ -11,11 +11,17 @@ interface Props {
 const SocialLink = styled.a`
   display: flex;
   align-items: center;
+  box-shadow: inset 0 -2px 0 0 #ffffff37;
   text-decoration: none;
+  transition: all 0.3s ease;
   padding: 0.2rem 0.4rem;
   color: white;
   &:nth-child(even) {
     color: white;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 0 #ffffff;
   }
 `;
 

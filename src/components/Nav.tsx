@@ -6,7 +6,7 @@ const NavStyle = styled.nav`
   display: flex;
   flex-direction: row;
   padding: 1rem 0;
-  justify-content: space-around;
+  justify-content: space-evenly;
   z-index: 10;
   a {
     text-decoration: none;
