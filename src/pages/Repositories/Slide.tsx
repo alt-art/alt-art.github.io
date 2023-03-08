@@ -4,7 +4,7 @@ import AliceCarousel from 'react-alice-carousel';
 import { useQuery } from 'react-query';
 import ReactLoading from 'react-loading';
 import { getRepositories } from '../../utils/api';
-import Card from '../Card';
+import Card from './Card';
 
 const SlideStyle = styled.div`
   position: sticky;

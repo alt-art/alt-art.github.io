@@ -6,9 +6,9 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Nav from './components/Nav';
-import Intro from './components/Intro';
-import Skills from './components/Skills';
-import Repositories from './components/Repositories';
+import Intro from './pages/Intro';
+import Skills from './pages/Skills';
+import Repositories from './pages/Repositories';
 
 const queryClient = new QueryClient();
 

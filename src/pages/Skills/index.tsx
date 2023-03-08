@@ -1,6 +1,6 @@
-import BlockText from '../BlockText';
-import Title from '../Title';
-import View from '../View';
+import BlockText from './BlockText';
+import Title from '../../components/Title';
+import View from '../../components/View';
 
 export default function Test(): JSX.Element {
   return (

@@ -1,6 +1,6 @@
-import Desc from '../Desc';
-import Title from '../Title';
-import View from '../View';
+import Desc from '../../components/Desc';
+import Title from '../../components/Title';
+import View from '../../components/View';
 
 export default function Intro(): JSX.Element {
   return (

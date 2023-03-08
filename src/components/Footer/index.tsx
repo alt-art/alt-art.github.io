@@ -1,6 +1,6 @@
 import { mdiEmail, mdiGithub, mdiLinkedin } from '@mdi/js';
 import styled from 'styled-components';
-import Social from '../Social';
+import Social from './Social';
 
 const FooterStyle = styled.footer`
   position: fixed;

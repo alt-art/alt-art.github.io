@@ -1,6 +1,6 @@
 import Slide from './Slide';
-import Title from '../Title';
-import View from '../View';
+import Title from '../../components/Title';
+import View from '../../components/View';
 
 export default function Repositories(): JSX.Element {
   return (
