@@ -30,11 +30,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Build
         env:
           VITE_REPO_API: ${{ secrets.VITE_REPO_API }}
-        run: yarn build
+        run: pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
