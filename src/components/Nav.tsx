@@ -26,7 +26,7 @@ export default function Nav(): JSX.Element {
     <NavStyle data-aos="fade-down">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="#repositories">Repositories</a>
     </NavStyle>
   );
 }

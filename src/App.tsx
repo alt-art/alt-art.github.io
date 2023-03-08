@@ -8,7 +8,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import Nav from './components/Nav';
 import Intro from './components/Intro';
 import Skills from './components/Skills';
-import Projects from './components/Projects';
+import Repositories from './components/Repositories';
 
 const queryClient = new QueryClient();
 
@@ -24,7 +24,7 @@ function App(): JSX.Element {
         <StyledBackground />
         <Intro />
         <Skills />
-        <Projects />
+        <Repositories />
         <Footer />
       </QueryClientProvider>
     </main>
