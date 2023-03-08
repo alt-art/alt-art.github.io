@@ -1,7 +1,7 @@
 import React from 'react';
 import Sketch from 'react-p5';
-import P5 from 'p5';
 import styled from 'styled-components';
+import P5 from 'p5';
 
 const Canvas: React.FC = () => {
   const setup = (p5: P5, canvasParentRef: Element): void => {
