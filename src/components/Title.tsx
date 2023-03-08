@@ -10,6 +10,7 @@ const Title = styled.h1`
   text-decoration: #ffffffcc underline;
   @media (max-width: 768px) {
     padding: 0 2rem;
+    font-size: 3rem;
   }
 `;
 
