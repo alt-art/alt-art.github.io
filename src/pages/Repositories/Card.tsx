@@ -8,7 +8,7 @@ const CardStyle = styled.a<CardStyleProps>`
   display: flex;
   flex-direction: column;
   justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};
-  max-width: 340px;
+  width: 340px;
   height: 340px;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
@@ -41,7 +41,7 @@ const CardDesc = styled.p`
 `;
 
 interface Props {
-  image: string
+  image?: string
   title: string
   desc: string
   link: string

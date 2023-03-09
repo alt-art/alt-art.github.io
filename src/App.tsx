@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import StyledBackground from './components/Background';
 import Footer from './components/Footer';
-import 'react-alice-carousel/lib/alice-carousel.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
