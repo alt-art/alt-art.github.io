@@ -17,10 +17,11 @@
       "jsx": true
     }
   },
-  "plugins": ["prettier", "promise", "react"],
+  "plugins": ["prettier", "promise", "react", "react-hooks", "@typescript-eslint"],
   "extends": [
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "plugin:promise/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
