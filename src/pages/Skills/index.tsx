@@ -2,7 +2,7 @@ import BlockText from './BlockText';
 import Title from '../../components/Title';
 import View from '../../components/View';
 
-export default function Test(): JSX.Element {
+export default function Skills(): JSX.Element {
   return (
     <View id="skills">
       <Title data-aos="fade-right">Skills</Title>
