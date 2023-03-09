@@ -37,7 +37,6 @@ function Repositories(): JSX.Element {
 
   useEffect(() => {
     if (status === 'success') {
-      console.log(repos);
       setItems(
         repos.map((repo) => (
           <Card
