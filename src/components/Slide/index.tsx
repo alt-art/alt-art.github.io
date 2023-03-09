@@ -4,7 +4,7 @@ import { motion, useAnimationControls } from 'framer-motion';
 import SlideButton from './SlideButton';
 
 interface SlideProps {
-  elements: ReactNode[]
+  elements: ReactNode[];
 }
 
 const SlideStyle = styled.div`
@@ -51,7 +51,10 @@ export function Slide(props: SlideProps): JSX.Element {
   const [activeIndex, setActiveIndex] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
   const elements = props.elements.map((element, index) => (
-    <ItemWrapper key={index} className={index === activeIndex ? '__active' : ''}>
+    <ItemWrapper
+      key={index}
+      className={index === activeIndex ? '__active' : ''}
+    >
       {element}
     </ItemWrapper>
   ));
@@ -69,7 +72,7 @@ export function Slide(props: SlideProps): JSX.Element {
     const activeItem = getActiveItem();
     const offset = (-activeIndex % elements.length) * getItemWidth(activeItem);
     void animateOuter.start({
-      x: offset || 0
+      x: offset || 0,
     });
   }, [activeIndex, animateOuter, elements]);
 

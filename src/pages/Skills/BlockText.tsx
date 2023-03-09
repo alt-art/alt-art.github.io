@@ -22,7 +22,7 @@ const TextStyle = styled.span`
 `;
 
 interface Props {
-  text: string
+  text: string;
 }
 
 export default function BlockText({ text }: Props): JSX.Element {

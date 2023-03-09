@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface CardStyleProps {
-  center?: boolean
+  center?: boolean;
 }
 
 const CardStyle = styled.a<CardStyleProps>`
@@ -41,10 +41,10 @@ const CardDesc = styled.p`
 `;
 
 interface Props {
-  image?: string
-  title: string
-  desc: string
-  link: string
+  image?: string;
+  title: string;
+  desc: string;
+  link: string;
 }
 
 const Card = ({ title, desc, image, link }: Props): JSX.Element => {

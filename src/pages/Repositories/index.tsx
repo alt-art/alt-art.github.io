@@ -40,6 +40,7 @@ function Repositories(): JSX.Element {
       setItems(
         repos.map((repo) => (
           <Card
+            key={repo.html_url}
             title={repo.name}
             desc={repo.description}
             link={repo.html_url}
@@ -52,7 +53,9 @@ function Repositories(): JSX.Element {
 
   return (
     <View>
-      <Title id="repositories" data-aos="fade-right">Repositories</Title>
+      <Title id="repositories" data-aos="fade-right">
+        Repositories
+      </Title>
       <SlideContainer>
         {status === 'success' && <Slide elements={items} />}
         {status === 'loading' && (

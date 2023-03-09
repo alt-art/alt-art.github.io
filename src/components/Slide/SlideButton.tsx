@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface ButtonProps {
-  side: 'left' | 'right'
+  side: 'left' | 'right';
 }
 
 const SlideButton = styled.button<ButtonProps>`
@@ -19,7 +19,7 @@ const SlideButton = styled.button<ButtonProps>`
   height: 100%;
   z-index: 1;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 0px;
     height: 0px;
@@ -27,7 +27,10 @@ const SlideButton = styled.button<ButtonProps>`
     left: 50%;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    ${(props) => props.side === 'right' ? 'border-left' : 'border-right'}: 20px solid #dd6387;
+    ${(props) =>
+      props.side === 'right'
+        ? 'border-left'
+        : 'border-right'}: 20px solid #dd6387;
     transition: all 0.3s ease;
   }
   &:hover::before {

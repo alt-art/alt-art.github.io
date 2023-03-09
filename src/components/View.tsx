@@ -11,8 +11,8 @@ const ViewStyle = styled.div`
 `;
 
 interface Props {
-  children: React.ReactNode
-  id?: string
+  children: React.ReactNode;
+  id?: string;
 }
 const View: React.FC<Props> = ({ children, id }: Props): JSX.Element => (
   <div id={id}>

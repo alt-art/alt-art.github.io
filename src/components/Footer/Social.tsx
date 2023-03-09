@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Icon } from '@mdi/react';
 
 interface Props {
-  label: string
-  icon: string
-  link: string
+  label: string;
+  icon: string;
+  link: string;
 }
 
 const SocialLink = styled.a`

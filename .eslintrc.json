@@ -1,25 +1,32 @@
 {
+  "root": true,
+  "env": {
+    "node": false,
+    "browser": true
+  },
   "settings": {
     "react": {
       "version": "detect"
     }
   },
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": ["standard-with-typescript"],
-  "overrides": [],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 2021,
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "plugins": ["react"],
+  "plugins": ["prettier", "promise", "react"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:promise/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
   "rules": {
-    "@typescript-eslint/triple-slash-reference": "off",
-    "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/semi": ["error", "always"],
-    "@typescript-eslint/space-before-function-paren": "off"
+    "no-console": "warn"
   }
 }
