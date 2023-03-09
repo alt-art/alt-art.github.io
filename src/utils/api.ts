@@ -13,10 +13,8 @@ export async function getRepositories(): Promise<Repository[]> {
   }
   const repositories = (
     await axios.get<Repository[]>(import.meta.env.VITE_REPO_API, {
-      headers: {
-        Authorization: import.meta.env.VITE_DEV_TOKEN
-          ? `Bearer ${import.meta.env.VITE_DEV_TOKEN as string}`
-          : false,
+      headers: import.meta.env.VITE_DEV_TOKEN && {
+        Authorization: `Bearer ${import.meta.env.VITE_DEV_TOKEN}`,
       },
     })
   ).data;
