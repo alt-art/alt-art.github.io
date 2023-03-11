@@ -41,40 +41,51 @@ function getItemWidth(item: HTMLElement | null): number {
   return width - 4;
 }
 
-function getActiveItem(): HTMLElement | null {
-  return document.querySelector('.__active');
+function getActiveItem(uuid: string): HTMLElement | null {
+  if (!uuid) {
+    return null;
+  }
+  return document.querySelector(`.${uuid}`);
 }
 
 export function Slide(props: SlideProps): JSX.Element {
   const animateOuter = useAnimationControls();
+
+  const [id, setId] = useState('');
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
   const elements = props.elements.map((element, index) => (
     <ItemWrapper
       key={index}
-      className={index === activeIndex ? '__active' : ''}
+      className={index === activeIndex ? `__active ${id}` : ''}
     >
       {element}
     </ItemWrapper>
   ));
 
   useEffect(() => {
+    setId(`__active-${new Date().getTime()}`);
     window.addEventListener('resize', () => setWidth(window.innerWidth));
     return () =>
       window.removeEventListener('resize', () => setWidth(window.innerWidth));
   }, []);
 
   const renderedElements = elements.length - (activeIndex % elements.length);
-  const isLastItems = renderedElements * getItemWidth(getActiveItem()) < width;
+  const isLastItems =
+    renderedElements * getItemWidth(getActiveItem(id)) < width;
 
   useEffect(() => {
-    const activeItem = getActiveItem();
+    const activeItem = getActiveItem(id);
+    if (!activeItem) {
+      return;
+    }
+    activeItem.getBoundingClientRect().width;
     const offset = (-activeIndex % elements.length) * getItemWidth(activeItem);
     void animateOuter.start({
       x: offset || 0,
     });
-  }, [activeIndex, animateOuter, elements]);
+  }, [activeIndex, animateOuter, elements, id]);
 
   return (
     <SlideStyle>
