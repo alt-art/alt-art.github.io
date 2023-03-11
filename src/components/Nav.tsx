@@ -7,14 +7,14 @@ const NavStyle = styled.nav`
   flex-direction: row;
   padding: 1rem 0;
   justify-content: space-evenly;
-  z-index: 10;
+  z-index: 1;
   a {
     text-decoration: none;
     color: #111213;
     padding: 0.5rem 1rem;
     border: 2px solid #ffffffcc;
     transition: all 0.3s ease;
-    background-color: #dd6387;
+    backdrop-filter: blur(10px);
     &:hover {
       background-color: #ffffffcc;
     }
@@ -23,7 +23,7 @@ const NavStyle = styled.nav`
 
 export default function Nav(): JSX.Element {
   return (
-    <NavStyle data-aos="fade-down">
+    <NavStyle>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#repositories">Repositories</a>
