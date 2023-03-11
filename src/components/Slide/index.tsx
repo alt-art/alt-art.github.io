@@ -35,7 +35,7 @@ const ItemWrapper = styled(motion.div)`
 
 function getItemWidth(item: HTMLElement | null): number {
   if (!item) {
-    return Infinity;
+    return 0;
   }
   const width = item.getBoundingClientRect().width;
   return width - 4;
@@ -53,6 +53,7 @@ export function Slide(props: SlideProps): JSX.Element {
 
   const [id, setId] = useState('');
 
+  const [isLastItems, setIsLastItems] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
   const elements = props.elements.map((element, index) => (
@@ -71,10 +72,6 @@ export function Slide(props: SlideProps): JSX.Element {
       window.removeEventListener('resize', () => setWidth(window.innerWidth));
   }, []);
 
-  const renderedElements = elements.length - (activeIndex % elements.length);
-  const isLastItems =
-    renderedElements * getItemWidth(getActiveItem(id)) < width;
-
   useEffect(() => {
     const activeItem = getActiveItem(id);
     if (!activeItem) {
@@ -85,7 +82,9 @@ export function Slide(props: SlideProps): JSX.Element {
     void animateOuter.start({
       x: offset || 0,
     });
-  }, [activeIndex, animateOuter, elements, id]);
+    const renderedElements = elements.length - activeIndex;
+    setIsLastItems(renderedElements * getItemWidth(getActiveItem(id)) < width);
+  }, [activeIndex, animateOuter, elements, id, width]);
 
   return (
     <SlideStyle>
