@@ -30,7 +30,7 @@ const Canvas: React.FC = () => {
       setup={setup}
       draw={draw}
       windowResized={(p5) =>
-        p5.resizeCanvas(p5.windowWidth, p5.windowHeight + 300)
+        p5.resizeCanvas(p5.windowWidth - 10, p5.windowHeight + 300)
       }
     />
   );

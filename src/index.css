@@ -7,7 +7,6 @@
 
 html {
   scroll-snap-type: y mandatory;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
