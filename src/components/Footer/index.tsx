@@ -12,7 +12,7 @@ const FooterStyle = styled.footer`
   width: 100%;
   padding: 0.5rem;
   backdrop-filter: blur(10px);
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   font-weight: bold;
 `;

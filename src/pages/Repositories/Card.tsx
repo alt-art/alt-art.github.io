@@ -11,7 +11,7 @@ const CardStyle = styled.a<CardStyleProps>`
   width: 340px;
   height: 340px;
   background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   border-radius: 0.5rem;
   margin: 1rem;
   user-select: none;
@@ -25,7 +25,7 @@ const CardStyle = styled.a<CardStyleProps>`
 
 const CardImage = styled.img`
   width: auto;
-  background-color: white;
+  color: rgba(255, 255, 255, 0.8);
   max-height: 100%;
   border-radius: 0.5rem 0.5rem 0 0;
 `;

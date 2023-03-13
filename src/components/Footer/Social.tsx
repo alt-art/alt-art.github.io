@@ -15,10 +15,7 @@ const SocialLink = styled.a`
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 0.2rem 0.4rem;
-  color: white;
-  &:nth-child(even) {
-    color: white;
-  }
+  color: rgba(255, 255, 255, 0.8);
 
   &:hover {
     box-shadow: inset 0 -2px 0 0 #ffffff;

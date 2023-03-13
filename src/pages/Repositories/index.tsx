@@ -23,7 +23,7 @@ const Center = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   & a {
     color: #dd6387;
