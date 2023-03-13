@@ -5,7 +5,7 @@ import P5 from 'p5';
 
 const Canvas: React.FC = () => {
   const setup = (p5: P5, canvasParentRef: Element): void => {
-    p5.createCanvas(p5.windowWidth, p5.windowHeight + 300).parent(
+    p5.createCanvas(p5.windowWidth - 10, p5.windowHeight + 300).parent(
       canvasParentRef
     );
   };
