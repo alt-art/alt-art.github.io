@@ -59,7 +59,11 @@ jobs:
         run: pnpm install
       - name: Build
         env:
-          VITE_REPO_API: ${{ secrets.VITE_REPO_API }}
+          VITE_REPO_API: ${{ vars.VITE_REPO_API }}
+          VITE_SANITY_DATASET: ${{ vars.VITE_SANITY_DATASET }}
+          VITE_SANITY_PROJECT_ID: ${{ vars.VITE_SANITY_PROJECT_ID }}
+          VITE_SANITY_API_VERSION: ${{ vars.VITE_SANITY_API_VERSION }}
+          VITE_SANITY_GRAPHQL_API_URL: ${{ vars.VITE_SANITY_GRAPHQL_API_URL }}
         run: pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v2
