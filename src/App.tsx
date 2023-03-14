@@ -8,6 +8,9 @@ import Nav from './components/Nav';
 import Intro from './pages/Intro';
 import Skills from './pages/Skills';
 import Repositories from './pages/Repositories';
+import NavButton from './components/NavButton';
+import NavProvider, { NavConsumer } from './context/NavProvider';
+import { AnimatePresence } from 'framer-motion';
 
 const queryClient = new QueryClient();
 
@@ -18,14 +21,21 @@ function App(): JSX.Element {
 
   return (
     <main>
-      <QueryClientProvider client={queryClient}>
-        <Nav />
+      <NavProvider>
+        <NavButton />
+        <NavConsumer>
+          {({ isNavOpened }) => (
+            <AnimatePresence>{isNavOpened && <Nav />}</AnimatePresence>
+          )}
+        </NavConsumer>
         <StyledBackground />
         <Intro />
         <Skills />
-        <Repositories />
+        <QueryClientProvider client={queryClient}>
+          <Repositories />
+        </QueryClientProvider>
         <Footer />
-      </QueryClientProvider>
+      </NavProvider>
     </main>
   );
 }

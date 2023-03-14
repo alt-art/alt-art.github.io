@@ -15,6 +15,7 @@ const FooterStyle = styled.footer`
   color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   font-weight: bold;
+  z-index: 3;
 `;
 
 export default function Footer(): JSX.Element {
