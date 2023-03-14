@@ -8,6 +8,8 @@ import Nav from './components/Nav';
 import Intro from './pages/Intro';
 import Skills from './pages/Skills';
 import Repositories from './pages/Repositories';
+import Projects from './pages/Projects';
+import ProjectsModalProvider from './context/ProjectsModalProvider';
 import NavButton from './components/NavButton';
 import NavProvider, { NavConsumer } from './context/NavProvider';
 import { AnimatePresence } from 'framer-motion';
@@ -30,6 +32,9 @@ function App(): JSX.Element {
         </NavConsumer>
         <StyledBackground />
         <Intro />
+        <ProjectsModalProvider>
+          <Projects />
+        </ProjectsModalProvider>
         <Skills />
         <QueryClientProvider client={queryClient}>
           <Repositories />

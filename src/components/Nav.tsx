@@ -43,6 +43,9 @@ export default function Nav(): JSX.Element {
       <NavLink href="#about" onClick={() => setIsNavOpened(false)}>
         About
       </NavLink>
+      <NavLink href="#projects" onClick={() => setIsNavOpened(false)}>
+        Projects
+      </NavLink>
       <NavLink href="#skills" onClick={() => setIsNavOpened(false)}>
         Skills
       </NavLink>

@@ -1,18 +1,21 @@
-import { ReactNode, useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
 import styled from 'styled-components';
+import { useQuery, gql } from '@apollo/client';
 import ReactLoading from 'react-loading';
 import Title from '../../components/Title';
 import View from '../../components/View';
-import { getRepositories } from '../../utils/api';
+import { ReactNode, useContext, useEffect, useState } from 'react';
 import Card from './Card';
 import { Slide } from '../../components/Slide';
+import Modal from './Modal';
+import { ProjectsModalContext } from '../../context/ProjectsModalProvider';
+import { AnimatePresence } from 'framer-motion';
 
 const SlideContainer = styled.div`
   display: flex;
+  align-items: center;
   margin: 1rem 0;
   height: 404px;
-  align-items: center;
+  width: 100%;
   background-color: #111213;
 `;
 
@@ -21,6 +24,7 @@ const Center = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100%;
   height: 100%;
   color: rgba(255, 255, 255, 0.8);
@@ -31,39 +35,64 @@ const Center = styled.div`
   }
 `;
 
-function Repositories(): JSX.Element {
+const GET_PROJECTS = gql`
+  query GetProjects {
+    allProject(sort: { _createdAt: DESC }) {
+      _id
+      title
+      description
+      image {
+        asset {
+          url
+        }
+      }
+    }
+  }
+`;
+
+export interface Project {
+  _id: string;
+  title: string;
+  description: string;
+  liveLink: string;
+  githubLink: string;
+  techStack: string[];
+  image: {
+    asset: {
+      url: string;
+    };
+  };
+}
+
+function Projects() {
+  const { id } = useContext(ProjectsModalContext);
   const [items, setItems] = useState<ReactNode[]>([]);
-  const { data: repos, status } = useQuery('repos', getRepositories);
+  const { loading, error, data } = useQuery<{ allProject: Project[] }>(
+    GET_PROJECTS
+  );
 
   useEffect(() => {
-    if (status === 'success') {
+    if (data) {
       setItems(
-        repos.map((repo) => (
-          <Card
-            key={repo.html_url}
-            title={repo.name}
-            desc={repo.description}
-            link={repo.html_url}
-            image={repo.thumb}
-          />
+        data.allProject.map((project) => (
+          <Card key={project._id} {...project} />
         ))
       );
     }
-  }, [repos, status]);
+  }, [data]);
 
   return (
-    <View>
-      <Title id="repositories" data-aos="fade-right">
-        Repositories
-      </Title>
+    <View id="projects">
+      <Title>Projects</Title>
+      <AnimatePresence>{id && <Modal id={id} />}</AnimatePresence>
       <SlideContainer>
-        {status === 'success' && <Slide elements={items} />}
-        {status === 'loading' && (
+        {loading && (
           <Center>
             <ReactLoading type="bars" color="#dd6387" height={50} width={50} />
           </Center>
         )}
-        {status === 'error' && (
+        {data && <Slide elements={items} />}
+        {error && (
           <Center>
             <p>Sorry, something went wrong.</p>
             <p>
@@ -82,4 +111,4 @@ function Repositories(): JSX.Element {
   );
 }
 
-export default Repositories;
+export default Projects;
