@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { NavContext } from '../context/NavProvider';
 
@@ -32,6 +32,13 @@ const NavLink = styled.a`
 
 export default function Nav(): JSX.Element {
   const { setIsNavOpened } = useContext(NavContext);
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
   return (
     <NavStyle
