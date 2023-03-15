@@ -53,7 +53,7 @@ function Repositories(): JSX.Element {
   }, [repos, status]);
 
   return (
-    <View>
+    <View dark>
       <Title id="repositories" data-aos="fade-right">
         Repositories
       </Title>

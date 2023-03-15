@@ -6,7 +6,6 @@ const Title = styled.h1`
   font-weight: bolder;
   margin: 0;
   padding: 0 4rem;
-  color: #111213;
   text-decoration: #ffffffcc underline;
   @media (max-width: 768px) {
     padding: 0 2rem;

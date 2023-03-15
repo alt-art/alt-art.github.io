@@ -5,7 +5,6 @@ const Desc = styled.p`
   font-size: 1.2rem;
   margin: 0;
   padding: 0 4rem;
-  color: #111213;
   @media (max-width: 768px) {
     padding: 0 2rem;
   }
