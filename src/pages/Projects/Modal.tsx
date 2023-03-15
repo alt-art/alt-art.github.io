@@ -8,6 +8,7 @@ import { mdiCloseCircle } from '@mdi/js';
 import { Project } from '.';
 import { ProjectsModalContext } from '../../context/ProjectsModalProvider';
 import CardModal from './CardModal';
+import Error from '../../components/Error';
 
 const ModalView = styled(motion.div)`
   position: fixed;
@@ -134,16 +135,7 @@ function Modal({ id }: { id: string }) {
         {data?.Project && <CardModal {...data.Project} />}
         {!loading && !data?.Project && (
           <Center>
-            <p>Sorry, something went wrong.</p>
-            <p>
-              <a
-                href="https://github.com/alt-art?tab=repositories"
-                target="_blank"
-                rel="noreferrer"
-              >
-                You can check my projects on GitHub
-              </a>
-            </p>
+            <Error />
           </Center>
         )}
       </ModalStyles>

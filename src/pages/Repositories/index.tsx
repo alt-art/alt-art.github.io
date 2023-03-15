@@ -7,6 +7,7 @@ import View from '../../components/View';
 import { getRepositories } from '../../utils/api';
 import Card from './Card';
 import { Slide } from '../../components/Slide';
+import Error from '../../components/Error';
 
 const SlideContainer = styled.div`
   display: flex;
@@ -65,16 +66,7 @@ function Repositories(): JSX.Element {
         )}
         {status === 'error' && (
           <Center>
-            <p>Sorry, something went wrong.</p>
-            <p>
-              <a
-                href="https://github.com/alt-art?tab=repositories"
-                target="_blank"
-                rel="noreferrer"
-              >
-                You can check my projects on GitHub
-              </a>
-            </p>
+            <Error />
           </Center>
         )}
       </SlideContainer>

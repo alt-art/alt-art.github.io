@@ -9,6 +9,7 @@ import { Slide } from '../../components/Slide';
 import Modal from './Modal';
 import { ProjectsModalContext } from '../../context/ProjectsModalProvider';
 import { AnimatePresence } from 'framer-motion';
+import Error from '../../components/Error';
 
 const SlideContainer = styled.div`
   display: flex;
@@ -94,16 +95,7 @@ function Projects() {
         {data && <Slide elements={items} />}
         {error && (
           <Center>
-            <p>Sorry, something went wrong.</p>
-            <p>
-              <a
-                href="https://github.com/alt-art?tab=repositories"
-                target="_blank"
-                rel="noreferrer"
-              >
-                You can check my projects on GitHub
-              </a>
-            </p>
+            <Error />
           </Center>
         )}
       </SlideContainer>
