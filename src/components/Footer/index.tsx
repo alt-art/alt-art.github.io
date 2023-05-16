@@ -31,11 +31,7 @@ export default function Footer(): JSX.Element {
         icon={mdiLinkedin}
         link="https://www.linkedin.com/in/altart/"
       />
-      <Social
-        label="Email"
-        icon={mdiEmail}
-        link="mailto:pedromendescraft@gmail.com"
-      />
+      <Social label="Email" icon={mdiEmail} link="mailto:me@altart.top" />
     </FooterStyle>
   );
 }
