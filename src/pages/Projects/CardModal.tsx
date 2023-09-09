@@ -1,12 +1,41 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Project } from '.';
 import { urlFor } from '../../utils/sanity';
+import { Img } from 'react-image';
 
-const Image = styled.img`
+const Image = styled(Img)`
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+
+  @media (max-width: 540px) {
+    border-radius: 0;
+  }
+`;
+
+const skeletonAnimation = keyframes`
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: -200% 0%;
+  }
+`;
+
+const SkeletonImage = styled.div`
+  width: 100%;
+  height: 300px;
+  background: #111213;
+  background-image: linear-gradient(
+    110deg,
+    #111213 8%,
+    #292a2b 18%,
+    #111213 33%
+  );
+  background-size: 200% 100%;
+  border-radius: 10px 10px 0 0;
+  animation: ${skeletonAnimation} 1.5s ease-in-out infinite;
 
   @media (max-width: 540px) {
     border-radius: 0;
@@ -93,7 +122,11 @@ function CardModal({
 }: Project) {
   return (
     <>
-      <Image src={urlFor(image).height(300).width(540).url()} alt={title} />
+      <Image
+        src={urlFor(image).height(300).width(540).url()}
+        alt={title}
+        loader={<SkeletonImage />}
+      />
       <Title>{title}</Title>
       <Description>{description}</Description>
       <TechStackContainer>
