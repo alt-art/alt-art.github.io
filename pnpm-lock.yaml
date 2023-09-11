@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^3.0.4
     version: 3.0.4
   '@types/p5':
-    specifier: 1.7.0
-    version: 1.7.0
+    specifier: 1.3.3
+    version: 1.3.3
   '@types/react':
     specifier: ^18.2.21
     version: 18.2.21
@@ -2036,11 +2036,6 @@ packages:
 
   /@types/p5@1.3.3:
     resolution: {integrity: sha512-PBSFnX6IgV6Pqlx9wocUjSkGlm1I1ymz9tEiTbdNCqig6FOGiWcVUHx13TXRTBfRIhZC9+MqqgztMsgzpueaUg==}
-    dev: false
-
-  /@types/p5@1.7.0:
-    resolution: {integrity: sha512-6AnjmW98/edgXB+pYDBx7t6QbCogIG6NUzey93JpGTZA4096C+KjSN8y0sj43QRd9XtblrAhoRXHj1pFZ2vsCg==}
-    dev: true
 
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
