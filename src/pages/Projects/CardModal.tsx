@@ -89,7 +89,9 @@ const Link = styled.a<LinkProps>`
   color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   &:hover {
     ${({ highlight }) =>
       highlight && `background-color: rgba(255, 255, 255, 0.1);`}
