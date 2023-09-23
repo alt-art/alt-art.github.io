@@ -3,6 +3,8 @@ import { Project } from '.';
 import { useContext } from 'react';
 import { ProjectsModalContext } from '../../context/ProjectsModalProvider';
 import { urlFor } from '../../utils/sanity';
+import { Img } from 'react-image';
+import SkeletonImage from '../../components/SkeletonImage';
 
 const CardStyle = styled.a`
   display: flex;
@@ -22,7 +24,7 @@ const CardStyle = styled.a`
   }
 `;
 
-const Image = styled.img`
+const Image = styled(Img)`
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -43,7 +45,11 @@ function Card({ image, title, description, _id }: Project): JSX.Element {
 
   return (
     <CardStyle onClick={() => setId(_id)}>
-      <Image src={urlFor(image).width(340).height(150).url()} />
+      <Image
+        src={urlFor(image).width(340).height(150).url()}
+        alt={title}
+        loader={<SkeletonImage height={150} />}
+      />
       <Title>{title}</Title>
       <Description>{description}</Description>
     </CardStyle>
