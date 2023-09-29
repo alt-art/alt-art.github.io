@@ -12,6 +12,7 @@ export default function Skills(): JSX.Element {
       <BlockText text="Express" />
       <BlockText text="NodeJS" />
       <BlockText text="React" />
+      <BlockText text="Vue" />
     </View>
   );
 }
