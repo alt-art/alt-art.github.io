@@ -29,7 +29,8 @@
     "react-loading": "^2.0.3",
     "react-p5": "^1.4.1",
     "react-query": "^3.39.3",
-    "styled-components": "^6.0.8"
+    "styled-components": "^6.0.8",
+    "vite-plugin-pwa": "^0.16.5"
   },
   "devDependencies": {
     "@types/aos": "^3.0.5",
