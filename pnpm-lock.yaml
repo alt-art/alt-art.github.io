@@ -68,8 +68,8 @@ dependencies:
 
 devDependencies:
   '@types/aos':
-    specifier: ^3.0.5
-    version: 3.0.5
+    specifier: ^3.0.6
+    version: 3.0.6
   '@types/p5':
     specifier: 1.7.0
     version: 1.7.0
@@ -2107,8 +2107,8 @@ packages:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: true
 
-  /@types/aos@3.0.5:
-    resolution: {integrity: sha512-/WgEUKc4VYRlHJGUd90xkZbuWGaooB1y6KxUflOj6jNr4JQBFNUe/NRUgKVdo6WDYTD7Mt76/eS/A4iztaOFGQ==}
+  /@types/aos@3.0.6:
+    resolution: {integrity: sha512-H6RbMQXco8pZWhh7Wjpqrd9ISVwH5EId0hM5vxebcDiK6HgIizbVj1718Q8PQLQ7cVBsxTK0rbVy0T3dR6eoow==}
     dev: true
 
   /@types/eslint@8.44.2:
