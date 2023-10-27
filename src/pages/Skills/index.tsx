@@ -5,7 +5,7 @@ import View from '../../components/View';
 export default function Skills(): JSX.Element {
   return (
     <View id="skills">
-      <Title data-aos="fade-right">Skills</Title>
+      <Title>Skills</Title>
       <BlockText text="Rust" />
       <BlockText text="NestJS" />
       <BlockText text="TypeScript" />

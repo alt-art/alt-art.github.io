@@ -1,91 +1,7 @@
-import styled from 'styled-components';
 import { Project } from '.';
 import { urlFor } from '../../utils/sanity';
 import { Img } from 'react-image';
 import SkeletonImage from '../../components/SkeletonImage';
-
-const Image = styled(Img)`
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-
-  @media (max-width: 540px) {
-    border-radius: 0;
-  }
-`;
-
-export const Title = styled.h3`
-  margin: 0.5rem 1rem;
-  font-size: 1.5rem;
-`;
-
-export const Description = styled.p`
-  margin: 0.5rem 1rem;
-`;
-
-const TechStack = styled.span`
-  margin: 0.2rem 0.2rem;
-  padding: 0.2rem 0.5rem;
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-`;
-
-const TechStackContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0rem 1rem;
-`;
-
-interface LinkProps {
-  highlight?: boolean;
-}
-
-const Link = styled.a<LinkProps>`
-  padding: 1rem;
-  margin: 0.5rem;
-  width: 100%;
-  font-size: 1.2rem;
-  text-decoration: none;
-  ${({ highlight }) =>
-    highlight
-      ? `
-      background-color: #dd6387;
-      border: 2px solid #dd6387;
-      `
-      : `
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 2px solid #ffffffcc;
-      `}
-  color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  text-align: center;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-  &:hover {
-    ${({ highlight }) =>
-      highlight && `background-color: rgba(255, 255, 255, 0.1);`}
-    border: 2px solid #dd6387;
-    color: #dd6387;
-  }
-
-  @media (max-width: 540px) {
-    margin: 0.5rem 0;
-  }
-`;
-
-const LinksContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5rem;
-
-  @media (max-width: 540px) {
-    flex-direction: column;
-  }
-`;
 
 function CardModal({
   title,
@@ -97,30 +13,46 @@ function CardModal({
 }: Project) {
   return (
     <>
-      <Image
+      <Img
+        className="h-[300px] w-full object-cover sm:rounded-t-lg"
         src={urlFor(image).height(300).width(540).url()}
         alt={title}
         loader={<SkeletonImage height={300} />}
       />
-      <Title>{title}</Title>
-      <Description>{description}</Description>
-      <TechStackContainer>
+      <h3 className="mx-4 mt-2 text-2xl font-bold">{title}</h3>
+      <p className="mx-4">{description}</p>
+      <div className="mx-4 flex flex-wrap">
         {techStack.map((tech: string) => (
-          <TechStack key={tech}>{tech}</TechStack>
+          <span
+            className="m-1 rounded-md border-2 border-white/10 bg-white/10 px-2 py-1 text-base leading-5"
+            key={tech}
+          >
+            {tech}
+          </span>
         ))}
-      </TechStackContainer>
-      <LinksContainer>
+      </div>
+      <div className="m-4 flex flex-col justify-between gap-4 sm:flex-row">
         {liveLink && (
-          <Link highlight href={liveLink} target="_blank" rel="noreferrer">
+          <a
+            className="h-fit w-full rounded-md border-2 border-primary bg-primary p-4 text-center text-xl transition-colors duration-300 hover:bg-white/10 hover:text-primary"
+            href={liveLink}
+            target="_blank"
+            rel="noreferrer"
+          >
             Live
-          </Link>
+          </a>
         )}
         {githubLink && (
-          <Link href={githubLink} target="_blank" rel="noreferrer">
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noreferrer"
+            className=" w-full rounded-md border-2 border-white bg-white/10 p-4 text-center text-xl transition-colors duration-300 hover:border-primary hover:text-primary"
+          >
             GitHub
-          </Link>
+          </a>
         )}
-      </LinksContainer>
+      </div>
     </>
   );
 }

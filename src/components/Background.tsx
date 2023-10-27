@@ -1,7 +1,7 @@
 import React from 'react';
-import Sketch from 'react-p5';
-import styled from 'styled-components';
 import P5 from 'p5';
+
+const Sketch = React.lazy(() => import('react-p5'));
 
 const Canvas: React.FC = () => {
   const setup = (p5: P5, canvasParentRef: Element): void => {
@@ -36,16 +36,11 @@ const Canvas: React.FC = () => {
   );
 };
 
-const StyledBackground = styled.div`
-  position: absolute;
-  z-index: -1;
-`;
-
 const Background: React.FC = () => {
   return (
-    <StyledBackground>
+    <div className="absolute z-[-10]">
       <Canvas />
-    </StyledBackground>
+    </div>
   );
 };
 

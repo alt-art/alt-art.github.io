@@ -1,8 +1,5 @@
-import { useEffect } from 'react';
-import StyledBackground from './components/Background';
+import Background from './components/Background';
 import Footer from './components/Footer';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Nav from './components/Nav';
 import Intro from './pages/Intro';
@@ -17,10 +14,6 @@ import { AnimatePresence } from 'framer-motion';
 const queryClient = new QueryClient();
 
 function App(): JSX.Element {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
-
   return (
     <main>
       <NavProvider>
@@ -30,7 +23,7 @@ function App(): JSX.Element {
             <AnimatePresence>{isNavOpened && <Nav />}</AnimatePresence>
           )}
         </NavConsumer>
-        <StyledBackground />
+        <Background />
         <Intro />
         <ProjectsModalProvider>
           <Projects />

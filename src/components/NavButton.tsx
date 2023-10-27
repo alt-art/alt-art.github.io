@@ -1,31 +1,10 @@
-import { motion } from 'framer-motion';
+import { HTMLMotionProps, motion } from 'framer-motion';
 import { useContext } from 'react';
-import styled from 'styled-components';
 import { NavContext } from '../context/NavProvider';
 
-const NavButtonStyle = styled.button`
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: transparent;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-  z-index: 3;
-`;
-
-const Line = styled(motion.div)`
-  width: 2rem;
-  height: 0.2rem;
-  background-color: rgba(255, 255, 255, 0.8);
-`;
+function Line(props: HTMLMotionProps<'div'>): JSX.Element {
+  return <motion.div {...props} className="h-1 w-8 bg-white/80" />;
+}
 
 export default function NavButton(): JSX.Element {
   const { isNavOpened, setIsNavOpened } = useContext(NavContext);
@@ -44,7 +23,11 @@ export default function NavButton(): JSX.Element {
   };
 
   return (
-    <NavButtonStyle onClick={() => setIsNavOpened(!isNavOpened)}>
+    <button
+      aria-label="Open navigation"
+      className="fixed right-0 top-0 z-30 flex h-16 w-16 flex-col items-center justify-center border-2 border-white/80 backdrop-blur-lg"
+      onClick={() => setIsNavOpened(!isNavOpened)}
+    >
       <Line
         variants={lineOne}
         animate={isNavOpened ? 'close' : 'open'}
@@ -60,6 +43,6 @@ export default function NavButton(): JSX.Element {
         animate={isNavOpened ? 'close' : 'open'}
         transition={{ duration: 0.2, type: 'spring', stiffness: 150 }}
       />
-    </NavButtonStyle>
+    </button>
   );
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Icon } from '@mdi/react';
 
 interface Props {
@@ -8,27 +7,18 @@ interface Props {
   link: string;
 }
 
-const SocialLink = styled.a`
-  display: flex;
-  align-items: center;
-  box-shadow: inset 0 -2px 0 0 #ffffff37;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  padding: 0.2rem 0.4rem;
-  color: rgba(255, 255, 255, 0.8);
-
-  &:hover {
-    box-shadow: inset 0 -2px 0 0 #ffffff;
-  }
-`;
-
 const Social: React.FC<Props> = ({ label, icon, link }: Props): JSX.Element => {
   return (
-    <SocialLink href={link} target="_blank" rel="noopener noreferrer">
+    <a
+      className="flex items-center border-b-2 border-white/30 px-2 py-1 text-white/80 transition-[border-color] duration-300 hover:border-white"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Icon path={icon} size={1} />
       &nbsp;
       <p>{label}</p>
-    </SocialLink>
+    </a>
   );
 };
 

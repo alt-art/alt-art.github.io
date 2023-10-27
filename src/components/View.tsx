@@ -1,22 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-
-interface ViewStyleProps {
-  dark?: boolean;
-}
-
-const ViewStyle = styled.div<ViewStyleProps>`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  scroll-snap-align: start;
-  justify-content: center;
-
-  ${({ dark }) =>
-    dark &&
-    `background-color: #111213;
-     color: rgba(255, 255, 255, 0.8);`}
-`;
 
 interface Props {
   children: React.ReactNode;
@@ -25,7 +7,13 @@ interface Props {
 }
 const View: React.FC<Props> = ({ children, id, dark }: Props): JSX.Element => (
   <div id={id}>
-    <ViewStyle dark={dark}>{children}</ViewStyle>
+    <div
+      className={`flex h-[100vh] snap-center flex-col justify-center ${
+        dark && 'bg-black text-white/80'
+      }`}
+    >
+      {children}
+    </div>
   </div>
 );
 

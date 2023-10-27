@@ -1,7 +1,6 @@
 import { useContext, useEffect, useRef } from 'react';
 import { gql, useQuery } from '@apollo/client';
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
 import ReactLoading from 'react-loading';
 import { Icon } from '@mdi/react';
 import { mdiCloseCircle } from '@mdi/js';
@@ -9,67 +8,7 @@ import { Project } from '.';
 import { ProjectsModalContext } from '../../context/ProjectsModalProvider';
 import CardModal from './CardModal';
 import Error from '../../components/Error';
-
-const ModalView = styled(motion.div)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #111213b9;
-  color: rgba(255, 255, 255, 0.8);
-  z-index: 3;
-`;
-
-const ModalStyles = styled(motion.div)`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 540px;
-  background-color: #292a2b;
-  border-radius: 10px;
-
-  @media (max-width: 540px) {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-  }
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  background-color: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.8);
-  transition: all 0.3s ease;
-  cursor: pointer;
-
-  &:hover {
-    color: rgba(255, 255, 255, 0.5);
-  }
-`;
-
-export const Center = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 570px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.5rem;
-  & a {
-    color: #dd6387;
-    text-decoration: none;
-  }
-`;
+import SlideCenter from '../../components/SlideCenter';
 
 const GET_PROJECT_BY_ID = gql`
   query GetProjectById($id: ID!) {
@@ -113,33 +52,38 @@ function Modal({ id }: { id: string }) {
   }, [ref, setId]);
 
   return (
-    <ModalView
+    <motion.div
+      className="fixed inset-0 z-30 flex items-center justify-center bg-black/75 text-white/80"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <ModalStyles
+      <motion.div
+        className="relative flex h-full w-full flex-col bg-black-light sm:h-auto sm:w-[540px] sm:rounded-xl"
         ref={ref}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0, opacity: 0 }}
       >
-        <CloseButton onClick={() => setId('')}>
+        <button
+          className="absolute right-0 top-0 p-4 transition-colors duration-300 hover:text-white/50"
+          onClick={() => setId('')}
+        >
           <Icon path={mdiCloseCircle} size={1.3} />
-        </CloseButton>
+        </button>
         {loading && (
-          <Center>
+          <SlideCenter modal>
             <ReactLoading type="bars" color="#dd6387" height={50} width={50} />
-          </Center>
+          </SlideCenter>
         )}
         {data?.Project && <CardModal {...data.Project} />}
         {!loading && !data?.Project && (
-          <Center>
+          <SlideCenter modal>
             <Error />
-          </Center>
+          </SlideCenter>
         )}
-      </ModalStyles>
-    </ModalView>
+      </motion.div>
+    </motion.div>
   );
 }
 

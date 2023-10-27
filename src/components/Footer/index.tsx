@@ -1,26 +1,9 @@
 import { mdiEmail, mdiGithub, mdiLinkedin } from '@mdi/js';
-import styled from 'styled-components';
 import Social from './Social';
-
-const FooterStyle = styled.footer`
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 0.5rem;
-  backdrop-filter: blur(10px);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
-  font-weight: bold;
-  z-index: 3;
-`;
 
 export default function Footer(): JSX.Element {
   return (
-    <FooterStyle>
+    <footer className="fixed inset-x-0 bottom-0 z-30 flex items-center justify-evenly p-2 text-base font-bold text-white/80 backdrop-blur-lg">
       <Social
         label="alt-art"
         icon={mdiGithub}
@@ -32,6 +15,6 @@ export default function Footer(): JSX.Element {
         link="https://www.linkedin.com/in/altart/"
       />
       <Social label="Email" icon={mdiEmail} link="mailto:me@altart.top" />
-    </FooterStyle>
+    </footer>
   );
 }

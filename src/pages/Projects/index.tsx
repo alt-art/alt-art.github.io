@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { useQuery, gql } from '@apollo/client';
 import ReactLoading from 'react-loading';
 import Title from '../../components/Title';
@@ -10,31 +9,7 @@ import Modal from './Modal';
 import { ProjectsModalContext } from '../../context/ProjectsModalProvider';
 import { AnimatePresence } from 'framer-motion';
 import Error from '../../components/Error';
-
-const SlideContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-  height: 404px;
-  width: 100%;
-  background-color: #111213;
-`;
-
-const Center = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.5rem;
-  & a {
-    color: #dd6387;
-    text-decoration: none;
-  }
-`;
+import SlideCenter from '../../components/SlideCenter';
 
 const GET_PROJECTS = gql`
   query GetProjects {
@@ -86,19 +61,19 @@ function Projects() {
     <View id="projects">
       <Title>Projects</Title>
       <AnimatePresence>{id && <Modal id={id} />}</AnimatePresence>
-      <SlideContainer>
+      <div className="my-4 flex h-[404px] w-full items-center bg-black">
         {loading && (
-          <Center>
+          <SlideCenter>
             <ReactLoading type="bars" color="#dd6387" height={50} width={50} />
-          </Center>
+          </SlideCenter>
         )}
         {data && <Slide elements={items} />}
         {error && (
-          <Center>
+          <SlideCenter>
             <Error />
-          </Center>
+          </SlideCenter>
         )}
-      </SlideContainer>
+      </div>
     </View>
   );
 }
