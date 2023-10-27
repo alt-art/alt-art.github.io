@@ -7,6 +7,7 @@ function Error() {
           href="https://github.com/alt-art?tab=repositories"
           target="_blank"
           rel="noreferrer"
+          className="text-primary hover:underline"
         >
           You can check my projects on GitHub
         </a>

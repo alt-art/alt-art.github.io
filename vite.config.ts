@@ -13,6 +13,16 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
       },
+      manifest: {
+        name: 'Portifolio - Pedro Mendes',
+        short_name: 'Portifolio - Pedro Mendes',
+        description: 'Personal portifolio of Pedro Mendes',
+        background_color: '#dd6387',
+        theme_color: '#dd6387',
+        categories: ['portfolio', 'personal'],
+        lang: 'en-US',
+        id: '/',
+      },
     }),
   ],
 });

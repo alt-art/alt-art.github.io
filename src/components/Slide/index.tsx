@@ -1,37 +1,10 @@
 import { ReactNode, useEffect, useState } from 'react';
-import styled from 'styled-components';
 import { motion, useAnimationControls } from 'framer-motion';
 import SlideButton from './SlideButton';
 
 interface SlideProps {
   elements: ReactNode[];
 }
-
-const SlideStyle = styled.div`
-  position: relative;
-  direction: ltr;
-  width: 100%;
-  background-color: #111213;
-  overflow: hidden;
-
-  .__active {
-    border: 2px solid #dd6387;
-    border-radius: 0.5rem;
-  }
-`;
-
-const Outer = styled(motion.div)`
-  position: relative;
-  margin: 1rem 3rem;
-  white-space: nowrap;
-`;
-
-const ItemWrapper = styled(motion.div)`
-  position: relative;
-  display: inline-block;
-  white-space: normal;
-  vertical-align: top;
-`;
 
 function getItemWidth(item: HTMLElement | null): number {
   if (!item) {
@@ -57,12 +30,14 @@ export function Slide(props: SlideProps): JSX.Element {
   const [activeIndex, setActiveIndex] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
   const elements = props.elements.map((element, index) => (
-    <ItemWrapper
+    <div
       key={index}
-      className={index === activeIndex ? `__active ${id}` : ''}
+      className={`relative inline-block whitespace-normal align-top ${
+        index === activeIndex && `rounded-md border-2 border-primary ${id}`
+      }`}
     >
       {element}
-    </ItemWrapper>
+    </div>
   ));
 
   useEffect(() => {
@@ -87,7 +62,7 @@ export function Slide(props: SlideProps): JSX.Element {
   }, [activeIndex, animateOuter, elements, id, width]);
 
   return (
-    <SlideStyle>
+    <div className="relative w-full overflow-hidden">
       {activeIndex !== 0 && (
         <SlideButton
           side="left"
@@ -96,12 +71,13 @@ export function Slide(props: SlideProps): JSX.Element {
           }}
         />
       )}
-      <Outer
+      <motion.div
+        className="relative mx-12 my-4 whitespace-nowrap"
         animate={animateOuter}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
       >
         {elements}
-      </Outer>
+      </motion.div>
       {!isLastItems && (
         <SlideButton
           side="right"
@@ -110,6 +86,6 @@ export function Slide(props: SlideProps): JSX.Element {
           }}
         />
       )}
-    </SlideStyle>
+    </div>
   );
 }

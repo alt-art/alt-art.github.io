@@ -1,13 +1,5 @@
-import styled from 'styled-components';
-
-const Desc = styled.p`
-  max-width: 30rem;
-  font-size: 1.2rem;
-  margin: 0;
-  padding: 0 4rem;
-  @media (max-width: 768px) {
-    padding: 0 2rem;
-  }
-`;
+function Desc({ children }: { children: string }): JSX.Element {
+  return <p className="max-w-lg px-8 text-xl leading-5 md:px-16">{children}</p>;
+}
 
 export default Desc;

@@ -1,45 +1,3 @@
-import styled from 'styled-components';
-
-interface CardStyleProps {
-  center?: boolean;
-}
-
-const CardStyle = styled.a<CardStyleProps>`
-  display: flex;
-  flex-direction: column;
-  justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};
-  width: 340px;
-  height: 340px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.8);
-  border-radius: 0.5rem;
-  margin: 1rem;
-  user-select: none;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-const CardImage = styled.img`
-  width: auto;
-  color: rgba(255, 255, 255, 0.8);
-  max-height: 100%;
-  border-radius: 0.5rem 0.5rem 0 0;
-`;
-
-const CardTitle = styled.h2`
-  font-size: 1.5rem;
-  margin: 0.5rem 1rem;
-`;
-
-const CardDesc = styled.p`
-  font-size: 1rem;
-  margin: 0.5rem 1rem;
-`;
-
 interface Props {
   image?: string;
   title: string;
@@ -47,13 +5,17 @@ interface Props {
   link: string;
 }
 
-const Card = ({ title, desc, image, link }: Props): JSX.Element => {
+const Card = ({ title, desc, link }: Props): JSX.Element => {
   return (
-    <CardStyle href={link} target="_blank" rel="noreferrer" center={!image}>
-      {image && <CardImage src={image} alt={title} />}
-      <CardTitle>{title}</CardTitle>
-      <CardDesc>{desc}</CardDesc>
-    </CardStyle>
+    <a
+      className="m-4 flex h-[340px] w-[340px] select-none flex-col justify-center rounded-lg bg-white/10 text-white/80 transition-transform duration-300 hover:scale-105"
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <h2 className="mx-4 my-2 text-2xl font-bold">{title}</h2>
+      <p className="mx-4 my-2 text-base leading-5">{desc}</p>
+    </a>
   );
 };
 
