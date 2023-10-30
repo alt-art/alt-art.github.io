@@ -28,7 +28,7 @@
     "react-loading": "^2.0.3",
     "react-p5": "^1.4.1",
     "react-query": "^3.39.3",
-    "vite-plugin-pwa": "^0.16.5"
+    "vite-plugin-pwa": "^0.16.6"
   },
   "devDependencies": {
     "@types/p5": "1.7.0",
