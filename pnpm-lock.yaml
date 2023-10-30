@@ -71,8 +71,8 @@ devDependencies:
     specifier: ^18.2.13
     version: 18.2.13
   '@types/react-vis':
-    specifier: ^1.11.12
-    version: 1.11.12
+    specifier: ^1.11.13
+    version: 1.11.13
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.62.0
     version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.52.0)(typescript@5.2.2)
@@ -1934,8 +1934,8 @@ packages:
       '@types/react': 18.2.28
     dev: true
 
-  /@types/react-vis@1.11.12:
-    resolution: {integrity: sha512-HEI+4UEM6KCfirTz3fzsB6V2wmwiGNwsOGzdo0FxOT6BpsyMTgkIawjM0iB1ASlPhpHQoZC84bmn2YroW7SriQ==}
+  /@types/react-vis@1.11.13:
+    resolution: {integrity: sha512-1cov2VpmJIbhQqEZsLMKE0gZULO0KBAkYTfTFklI7RbBDF3KJHnQWKfaQDPdOvBGjugLXP8solO6jBJtpR9eOw==}
     dependencies:
       '@types/react': 18.2.28
     dev: true
