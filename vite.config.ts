@@ -25,4 +25,7 @@ export default defineConfig({
       },
     }),
   ],
+  define: {
+    'globalThis.__DEV__': 'false',
+  },
 });

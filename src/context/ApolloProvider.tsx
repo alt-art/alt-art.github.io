@@ -6,7 +6,22 @@ import {
 
 const client = new ApolloClient({
   uri: import.meta.env.VITE_SANITY_GRAPHQL_API_URL,
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    typePolicies: {
+      Query: {
+        fields: {
+          Project: {
+            read(_, { args, toReference }) {
+              return toReference({
+                __typename: 'Project',
+                _id: args?.id,
+              });
+            },
+          },
+        },
+      },
+    },
+  }),
 });
 
 export default function ApolloProvider({
