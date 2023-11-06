@@ -15,8 +15,8 @@ dependencies:
     specifier: ^1.6.1
     version: 1.6.1
   '@sanity/client':
-    specifier: ^6.7.0
-    version: 6.7.0
+    specifier: ^6.7.1
+    version: 6.7.1
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
@@ -1724,8 +1724,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sanity/client@6.7.0:
-    resolution: {integrity: sha512-nQGIuXXhdtP5FDsdBjuPRpeV6jOHU6Eq5xr52KyUUi29SgC5h5XUzRIu7d1sF8N+ONqTngYueFuB8JDsdSo1Ng==}
+  /@sanity/client@6.7.1:
+    resolution: {integrity: sha512-rOnTg4MLAFTo8MkeZv2aL5RybHY1xl84L5KhfgKSU53jp0VAVikeCEbknyMJhavaMJmo8MYf1sEq2h4bmYiCKg==}
     engines: {node: '>=14.18'}
     dependencies:
       '@sanity/eventsource': 5.0.1
