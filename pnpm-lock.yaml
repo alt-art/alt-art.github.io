@@ -15,8 +15,8 @@ dependencies:
     specifier: ^1.6.1
     version: 1.6.1
   '@sanity/client':
-    specifier: ^6.7.1
-    version: 6.7.1
+    specifier: ^6.8.0
+    version: 6.8.0
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
@@ -1724,11 +1724,12 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sanity/client@6.7.1:
-    resolution: {integrity: sha512-rOnTg4MLAFTo8MkeZv2aL5RybHY1xl84L5KhfgKSU53jp0VAVikeCEbknyMJhavaMJmo8MYf1sEq2h4bmYiCKg==}
+  /@sanity/client@6.8.0:
+    resolution: {integrity: sha512-SshNs8WfL3PxStBLqgq5FZJAmJO/Nj2IPynPYa+ze+h4SUZU6L/LyIj6848C91nHABICocuUJ3gwZRhK6YNNdw==}
     engines: {node: '>=14.18'}
     dependencies:
       '@sanity/eventsource': 5.0.1
+      '@vercel/stega': 0.1.0
       get-it: 8.4.4
       rxjs: 7.8.1
     transitivePeerDependencies:
@@ -2091,6 +2092,10 @@ packages:
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
+
+  /@vercel/stega@0.1.0:
+    resolution: {integrity: sha512-5b0PkOJsFBX5alChuIO3qpkt5vIZBevzLPhUQ1UP8UzVjL3F1VllnZxp/thfD8R5ol7D7WHkgZHIjdUBX4tDpQ==}
+    dev: false
 
   /@vitejs/plugin-react-swc@3.4.1(vite@4.5.0):
     resolution: {integrity: sha512-7YQOQcVV5x1luD8nkbCDdyYygFvn1hjqJk68UvNAzY2QG4o4N5EwAhLLFNOcd1HrdMwDl0VElP8VutoWf9IvJg==}
