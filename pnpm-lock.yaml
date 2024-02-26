@@ -15,8 +15,8 @@ dependencies:
     specifier: ^1.6.1
     version: 1.6.1
   '@sanity/client':
-    specifier: ^6.13.3
-    version: 6.13.3
+    specifier: ^6.14.3
+    version: 6.14.3
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
@@ -1811,13 +1811,13 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@sanity/client@6.13.3:
-    resolution: {integrity: sha512-oOkce0xovPe0cwiEQeNPlrZugG69GHB+Dn16IlcnlyOp2GEsTD+Hgk29Z/cOhLbxqxGv9URpd0iuR9cTyEM4AQ==}
+  /@sanity/client@6.14.3:
+    resolution: {integrity: sha512-7pOWagBZgLKOULlwUL7rtq4VAXZHKldveSwXqTrP7I1dLZxjaFkPW2Z+rjYjSZOtjSd1kXjTpiAer9A9bEnpEQ==}
     engines: {node: '>=14.18'}
     dependencies:
       '@sanity/eventsource': 5.0.1
       '@vercel/stega': 0.1.0
-      get-it: 8.4.6
+      get-it: 8.4.9
       rxjs: 7.8.1
     transitivePeerDependencies:
       - supports-color
@@ -3227,8 +3227,8 @@ packages:
       has-symbols: 1.0.3
       hasown: 2.0.0
 
-  /get-it@8.4.6:
-    resolution: {integrity: sha512-omefjdbyRb2rRt0tnrZlbeWx9oZJm66o88K8JlYn13xELn+0+d6mJZOQHrJAdC3vxeJ4t/NHa4wh7Wlh+nvEJA==}
+  /get-it@8.4.9:
+    resolution: {integrity: sha512-C6AC03pqD5QAHKrS1kivcMs3w7n8RyH8G1GUX1VoEUnzUnTE+FjgV5g38ghJBml4sHcUVQuWCj9vg9GnugKrBw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       debug: 4.3.4
