@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@apollo/client':
     specifier: ^3.9.4
-    version: 3.9.4(@types/react@18.2.55)(graphql@16.8.1)(react-dom@18.2.0)(react@18.2.0)
+    version: 3.9.4(@types/react@18.2.58)(graphql@16.8.1)(react-dom@18.2.0)(react@18.2.0)
   '@mdi/js':
     specifier: ^7.4.47
     version: 7.4.47
@@ -56,8 +56,8 @@ devDependencies:
     specifier: 1.7.4
     version: 1.7.4
   '@types/react':
-    specifier: ^18.2.55
-    version: 18.2.55
+    specifier: ^18.2.58
+    version: 18.2.58
   '@types/react-dom':
     specifier: ^18.2.19
     version: 18.2.19
@@ -145,7 +145,7 @@ packages:
       leven: 3.1.0
     dev: false
 
-  /@apollo/client@3.9.4(@types/react@18.2.55)(graphql@16.8.1)(react-dom@18.2.0)(react@18.2.0):
+  /@apollo/client@3.9.4(@types/react@18.2.58)(graphql@16.8.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-Ip6dxjshDT2Dp6foLASTnKBW45Fytew/5JZutZwgc78hVrrGpO9UtZA9xteHXYdap0wIgCxCfeIQwbSu1ZdQpw==}
     peerDependencies:
       graphql: ^15.0.0 || ^16.0.0
@@ -174,7 +174,7 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      rehackt: 0.0.4(@types/react@18.2.55)(react@18.2.0)
+      rehackt: 0.0.4(@types/react@18.2.58)(react@18.2.0)
       response-iterator: 0.2.6
       symbol-observable: 4.0.0
       ts-invariant: 0.10.3
@@ -2016,11 +2016,11 @@ packages:
   /@types/react-dom@18.2.19:
     resolution: {integrity: sha512-aZvQL6uUbIJpjZk4U8JZGbau9KDeAwMfmhyWorxgBkqDIEf6ROjRozcmPIicqsUwPUjbkDfHKgGee1Lq65APcA==}
     dependencies:
-      '@types/react': 18.2.55
+      '@types/react': 18.2.58
     dev: true
 
-  /@types/react@18.2.55:
-    resolution: {integrity: sha512-Y2Tz5P4yz23brwm2d7jNon39qoAtMMmalOQv6+fEFt1mT+FcM3D841wDpoUvFXhaYenuROCy3FZYqdTjM7qVyA==}
+  /@types/react@18.2.58:
+    resolution: {integrity: sha512-TaGvMNhxvG2Q0K0aYxiKfNDS5m5ZsoIBBbtfUorxdH4NGSXIlYvZxLJI+9Dd3KjeB3780bciLyAb7ylO8pLhPw==}
     dependencies:
       '@types/prop-types': 15.7.9
       '@types/scheduler': 0.16.5
@@ -4428,7 +4428,7 @@ packages:
       jsesc: 0.5.0
     dev: false
 
-  /rehackt@0.0.4(@types/react@18.2.55)(react@18.2.0):
+  /rehackt@0.0.4(@types/react@18.2.58)(react@18.2.0):
     resolution: {integrity: sha512-xFroSGCbMEK/cTJVhq+c8l/AzIeMeojVyLqtZmr2jmIAFvePjapkCSGg9MnrcNk68HPaMxGf+Ndqozotu78ITw==}
     peerDependencies:
       '@types/react': '*'
@@ -4439,7 +4439,7 @@ packages:
       react:
         optional: true
     dependencies:
-      '@types/react': 18.2.55
+      '@types/react': 18.2.58
       react: 18.2.0
     dev: false
 
