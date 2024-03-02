@@ -38,7 +38,7 @@ function Repositories(): JSX.Element {
         {status === 'success' && <Slide elements={items} />}
         {status === 'loading' && (
           <SlideCenter>
-            <ReactLoading type="bars" color="#dd6387" height={50} width={50} />
+            <ReactLoading type="bars" color="#ec8daf" height={50} width={50} />
           </SlideCenter>
         )}
         {status === 'error' && (

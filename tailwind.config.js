@@ -6,7 +6,7 @@ export default {
       colors: {
         black: '#111213',
         'black-light': '#292a2b',
-        primary: '#dd6387',
+        primary: '#ec8daf',
       },
       width: {
         '404px': '404px',

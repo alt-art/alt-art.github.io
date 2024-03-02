@@ -5,10 +5,10 @@ interface Props {
   id?: string;
   dark?: boolean;
 }
-const View: React.FC<Props> = ({ children, id, dark }: Props): JSX.Element => (
-  <div id={id}>
+const View: React.FC<Props> = ({ children, dark }: Props): JSX.Element => (
+  <div>
     <div
-      className={`flex h-[100vh] snap-center flex-col justify-center ${
+      className={`flex h-[100vh] flex-col justify-center ${
         dark && 'bg-black text-white/80'
       }`}
     >

@@ -9,13 +9,8 @@
   font-family: 'Outfit', sans-serif;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-  overflow-x: hidden;
-}
-
 body {
-  background-color: #dd6387;
+  background-color: #ec8daf;
   color: #111213;
 }
 
@@ -26,7 +21,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #111213;
   border-radius: 10px;
-  border: 2px solid #dd6387;
+  border: 2px solid #ec8daf;
 }
 
 @keyframes skeleton {
@@ -42,7 +37,7 @@ body {
   .animate-skeleton {
     animation: skeleton 1s linear infinite;
     background-color: #111213;
-    background: linear-gradient(110deg, #111213 25%, #dd638863 37%, #111213 63%);
+    background: linear-gradient(110deg, #111213 25%, #ec8daf63 37%, #111213 63%);
     background-size: 200%;
   }
 }

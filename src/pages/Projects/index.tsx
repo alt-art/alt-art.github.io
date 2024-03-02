@@ -58,7 +58,7 @@ function Projects() {
   }, [data]);
 
   return (
-    <View id="projects">
+    <View>
       <Title>Projects</Title>
       <AnimatePresence>{id && <Modal id={id} />}</AnimatePresence>
       <div className="my-4 flex h-[404px] w-full items-center bg-black">
