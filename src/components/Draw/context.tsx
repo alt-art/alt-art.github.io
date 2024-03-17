@@ -28,7 +28,6 @@ class DrawContext2D {
     this.windowWidth = canvas.width;
     this.windowHeight = canvas.height;
     window.addEventListener('mousemove', (e) => {
-      // make the mouse position relative to the canvas
       const rect = canvas.getBoundingClientRect();
       this.mouseX = e.clientX - rect.left;
       this.mouseY = e.clientY - rect.top;

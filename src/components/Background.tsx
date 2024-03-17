@@ -69,11 +69,11 @@ const Background: React.FC = () => {
         <Draw
           onResize={(canvas) => {
             canvas.width = window.innerWidth - 10;
-            canvas.height = window.innerHeight + 100;
+            canvas.height = window.innerHeight + 150;
           }}
           setup={(canvas) => {
             canvas.width = window.innerWidth - 10;
-            canvas.height = window.innerHeight + 100;
+            canvas.height = window.innerHeight + 150;
           }}
           draw={(dc) => {
             dc.noStroke();
@@ -82,10 +82,11 @@ const Background: React.FC = () => {
               const noise = dc.noise(dc.frameCount / 1000);
               for (let j = 0; j < dc.windowWidth / 30; j++) {
                 let x = j * 30 + 15;
-                let y = dc.windowHeight - 40 - i * 30 - j * j * (noise * 0.4);
+                let y = dc.windowHeight - 90 - i * 30 - j * j * (noise * 0.4);
                 const angle = dc.atan2(y - dc.mouseY, x - dc.mouseX);
                 x += dc.cos(angle) * 20;
                 y += dc.sin(angle) * 20;
+                dc.noStroke();
                 dc.circle(x, y, 10);
                 if (dc.dist(dc.mouseX, dc.mouseY, x, y) < 100) {
                   dc.stroke('#ffffff64');
@@ -99,10 +100,10 @@ const Background: React.FC = () => {
               return;
             }
 
-            drawCube(dc, dc.windowWidth - 300, dc.windowHeight - 400);
-            drawCube(dc, dc.windowWidth - 300, dc.windowHeight - 600);
-            drawCube(dc, dc.windowWidth - 500, dc.windowHeight - 600);
-            drawCube(dc, dc.windowWidth - 700, dc.windowHeight - 800);
+            drawCube(dc, dc.windowWidth - 300, dc.windowHeight - 440);
+            drawCube(dc, dc.windowWidth - 300, dc.windowHeight - 640);
+            drawCube(dc, dc.windowWidth - 500, dc.windowHeight - 640);
+            drawCube(dc, dc.windowWidth - 700, dc.windowHeight - 840);
 
             angleX += angleSpeed;
             angleY += angleSpeed;
