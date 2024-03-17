@@ -5,6 +5,16 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    minify: 'terser',
+    sourcemap: false,
+    rollupOptions: {
+      treeshake: {
+        preset: 'smallest',
+        moduleSideEffects: true,
+      },
+    },
+  },
   plugins: [
     react(),
     eslint(),
