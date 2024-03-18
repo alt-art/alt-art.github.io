@@ -1,6 +1,5 @@
 import React from 'react';
-import Draw from 'react-altdraw';
-import DrawContext2D, { Vector } from 'react-altdraw/dist/drawContext';
+import Draw, { DrawContext2D, Vector } from 'react-altdraw';
 
 let angleX = 0;
 let angleY = 0;

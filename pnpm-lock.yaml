@@ -33,8 +33,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0
   react-altdraw:
-    specifier: ^1.0.0
-    version: 1.0.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.0.2
+    version: 1.0.2(react-dom@18.2.0)(react@18.2.0)
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
@@ -4490,10 +4490,10 @@ packages:
       safe-buffer: 5.2.1
     dev: false
 
-  /react-altdraw@1.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-XqBbAw17GHRfK87hlph56Ewxxzo8Qhq1nsiXzYVP0fHunE1MsORlE5zFt/pEIawzvWT+XRg2OYrHHasndIoVyw==}
+  /react-altdraw@1.0.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ml7ZIcf6bUmxVS8AqKg1sh+LL2Pe6bSp9DhoY5SPfT5USTmfaZyBlReNHUF/FYa5U3XDh1ANQbMg/M6cdPPAPA==}
     peerDependencies:
-      react: ^16.8.0
+      react: ^16.0.0 <= ^18.0.0
       react-dom: ^16.8.0
     dependencies:
       react: 18.2.0
@@ -5518,7 +5518,6 @@ packages:
 
   /workbox-google-analytics@7.0.0:
     resolution: {integrity: sha512-MEYM1JTn/qiC3DbpvP2BVhyIH+dV/5BjHk756u9VbwuAhu0QHyKscTnisQuz21lfRpOwiS9z4XdqeVAKol0bzg==}
-    deprecated: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
     dependencies:
       workbox-background-sync: 7.0.0
       workbox-core: 7.0.0
