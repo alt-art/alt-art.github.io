@@ -1,6 +1,6 @@
 import React from 'react';
-import Draw from './Draw';
-import DrawContext2D, { Vector } from './Draw/context';
+import Draw from 'react-altdraw';
+import DrawContext2D, { Vector } from 'react-altdraw/dist/drawContext';
 
 let angleX = 0;
 let angleY = 0;
@@ -14,16 +14,16 @@ function drawCube(dc: DrawContext2D, x: number, y: number) {
       i & 2 ? 100 : -100,
       i & 4 ? 100 : -100
     );
-    const tempY = v.y * dc.cos(angleX) - v.z * dc.sin(angleX);
-    const tempZ = v.y * dc.sin(angleX) + v.z * dc.cos(angleX);
+    const tempY = v.y * Math.cos(angleX) - v.z * Math.sin(angleX);
+    const tempZ = v.y * Math.sin(angleX) + v.z * Math.cos(angleX);
     v.y = tempY;
     v.z = tempZ;
-    const tempX = v.x * dc.cos(angleY) - v.z * dc.sin(angleY);
-    const tempZ2 = v.x * dc.sin(angleY) + v.z * dc.cos(angleY);
+    const tempX = v.x * Math.cos(angleY) - v.z * Math.sin(angleY);
+    const tempZ2 = v.x * Math.sin(angleY) + v.z * Math.cos(angleY);
     v.x = tempX;
     v.z = tempZ2;
-    const tempX2 = v.x * dc.cos(angleZ) - v.y * dc.sin(angleZ);
-    const tempY2 = v.x * dc.sin(angleZ) + v.y * dc.cos(angleZ);
+    const tempX2 = v.x * Math.cos(angleZ) - v.y * Math.sin(angleZ);
+    const tempY2 = v.x * Math.sin(angleZ) + v.y * Math.cos(angleZ);
     v.x = tempX2;
     v.y = tempY2;
 
@@ -40,8 +40,8 @@ function drawCube(dc: DrawContext2D, x: number, y: number) {
       vertice_end.x + x,
       vertice_end.y + y
     );
-    dc.circle(vertice_start.x + x, vertice_start.y + y, 10);
-    dc.circle(vertice_end.x + x, vertice_end.y + y, 10);
+    dc.circle(vertice_start.x + x, vertice_start.y + y, 5);
+    dc.circle(vertice_end.x + x, vertice_end.y + y, 5);
   }
 
   drawLine(vertices[0], vertices[1]);
@@ -83,11 +83,11 @@ const Background: React.FC = () => {
               for (let j = 0; j < dc.windowWidth / 30; j++) {
                 let x = j * 30 + 15;
                 let y = dc.windowHeight - 90 - i * 30 - j * j * (noise * 0.4);
-                const angle = dc.atan2(y - dc.mouseY, x - dc.mouseX);
-                x += dc.cos(angle) * 20;
-                y += dc.sin(angle) * 20;
+                const angle = Math.atan2(y - dc.mouseY, x - dc.mouseX);
+                x += Math.cos(angle) * 20;
+                y += Math.sin(angle) * 20;
                 dc.noStroke();
-                dc.circle(x, y, 10);
+                dc.circle(x, y, 5);
                 if (dc.dist(dc.mouseX, dc.mouseY, x, y) < 100) {
                   dc.stroke('#ffffff64');
                   dc.strokeWeight(2);

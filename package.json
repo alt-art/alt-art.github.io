@@ -20,6 +20,7 @@
     "framer-motion": "^11.0.14",
     "graphql": "^16.8.1",
     "react": "^18.2.0",
+    "react-altdraw": "^1.0.0",
     "react-dom": "^18.2.0",
     "react-image": "^4.1.0",
     "react-loading": "^2.0.3",
