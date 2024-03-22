@@ -10,6 +10,7 @@ import { ProjectsModalContext } from '../../context/ProjectsModalProvider';
 import { AnimatePresence } from 'framer-motion';
 import Error from '../../components/Error';
 import SlideCenter from '../../components/SlideCenter';
+import { useTranslation } from 'react-i18next';
 
 const GET_PROJECTS = gql`
   query GetProjects {
@@ -57,9 +58,11 @@ function Projects() {
     }
   }, [data]);
 
+  const { t } = useTranslation();
+
   return (
     <View>
-      <Title>Projects</Title>
+      <Title>{t('title.projects')}</Title>
       <AnimatePresence>{id && <Modal id={id} />}</AnimatePresence>
       <div className="my-4 flex h-[404px] w-full items-center bg-black">
         {loading && (

@@ -13,6 +13,12 @@ export default defineConfig({
         preset: 'smallest',
         moduleSideEffects: true,
       },
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          i18next: ['i18next', 'react-i18next'],
+        },
+      },
     },
   },
   plugins: [

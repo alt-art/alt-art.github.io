@@ -8,6 +8,7 @@ import Card from './Card';
 import { Slide } from '../../components/Slide';
 import Error from '../../components/Error';
 import SlideCenter from '../../components/SlideCenter';
+import { useTranslation } from 'react-i18next';
 
 function Repositories(): JSX.Element {
   const [items, setItems] = useState<ReactNode[]>([]);
@@ -28,9 +29,11 @@ function Repositories(): JSX.Element {
     }
   }, [repos, status]);
 
+  const { t } = useTranslation();
+
   return (
     <View dark>
-      <Title>Repositories</Title>
+      <Title>{t('title.repositories')}</Title>
       <div
         id="repositories"
         className="mx-4 flex h-[404px] items-center bg-black"

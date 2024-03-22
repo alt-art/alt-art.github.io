@@ -1,15 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import Desc from '../../components/Desc';
 import Title from '../../components/Title';
 import View from '../../components/View';
 
 export default function Intro(): JSX.Element {
+  const { t } = useTranslation();
   return (
     <View>
       <Title>Pedro Mendes</Title>
-      <Desc>
-        There are no challenges I don&apos;t want to solve with programming, as
-        a Full-stack Web Developer or a Rust enthusiast.
-      </Desc>
+      <Desc>{t('slogan')}</Desc>
     </View>
   );
 }
