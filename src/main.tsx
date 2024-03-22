@@ -9,7 +9,7 @@ const ApolloProvider = lazy(() => import('./context/ApolloProvider'));
 
 let lang = navigator.language.split('-')[0];
 (async () => {
-  if (!['en', 'pt'].includes(lang)) {
+  if (!['en', 'pt', 'ja'].includes(lang)) {
     lang = 'en';
   }
   const translation = (await import(`./translations/${lang}.ts`)).default;
