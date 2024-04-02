@@ -36,8 +36,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0
   react-altdraw:
-    specifier: ^1.0.2
-    version: 1.0.2(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.0.3
+    version: 1.0.3(react-dom@18.2.0)(react@18.2.0)
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
@@ -4504,11 +4504,11 @@ packages:
       safe-buffer: 5.2.1
     dev: false
 
-  /react-altdraw@1.0.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-ml7ZIcf6bUmxVS8AqKg1sh+LL2Pe6bSp9DhoY5SPfT5USTmfaZyBlReNHUF/FYa5U3XDh1ANQbMg/M6cdPPAPA==}
+  /react-altdraw@1.0.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ORh7auBLNtIwmMQ5+DNFS3p9pXDKaLOtiV7nkpsyO/tPO5GbFeNvqTC51AUq3/YNFTLbb7qx4IXuVTW/Vi8+Yg==}
     peerDependencies:
-      react: ^16.0.0 <= ^18.0.0
-      react-dom: ^16.8.0
+      react: '>=16.0.0 <=18.2.0'
+      react-dom: '>=16.0.0 <=18.2.0'
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
