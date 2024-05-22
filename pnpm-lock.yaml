@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@apollo/client':
-    specifier: ^3.10.3
-    version: 3.10.3(@types/react@18.2.79)(graphql@16.8.1)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^3.10.4
+    version: 3.10.4(@types/react@18.2.79)(graphql@16.8.1)(react-dom@18.2.0)(react@18.2.0)
   '@mdi/js':
     specifier: ^7.4.47
     version: 7.4.47
@@ -148,8 +148,8 @@ packages:
       leven: 3.1.0
     dev: false
 
-  /@apollo/client@3.10.3(@types/react@18.2.79)(graphql@16.8.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-4EIgZnFmRO1laWv3NCxlVIxcvimG63djuAXvyXhpQH3wkNMv9SykrasKRN08+z+cn/fVisBOLmkSRdyNyP9f4A==}
+  /@apollo/client@3.10.4(@types/react@18.2.79)(graphql@16.8.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-51gk0xOwN6Ls1EbTG5svFva1kdm2APHYTzmFhaAdvUQoJFDxfc0UwQgDxGptzH84vkPlo1qunY1FuboyF9LI3Q==}
     peerDependencies:
       graphql: ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5
