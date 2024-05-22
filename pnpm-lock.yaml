@@ -15,8 +15,8 @@ dependencies:
     specifier: ^1.6.1
     version: 1.6.1
   '@sanity/client':
-    specifier: ^6.18.0
-    version: 6.18.0
+    specifier: ^6.18.2
+    version: 6.18.2
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
@@ -1887,12 +1887,12 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@sanity/client@6.18.0:
-    resolution: {integrity: sha512-K6G5ZJm+ZW4LaH8JB8GlER8k97C4cPClcCDj/oEINEL59EZcMGjC2SLlx9zInocoxpcUkpvff2+1VsTkhUvMYA==}
+  /@sanity/client@6.18.2:
+    resolution: {integrity: sha512-2XXPyR5bHFdwi0e5j6z/TLsiZm5skIUsqtsx645rglzhTO6rLzDRwWMn+dsU6DPigf9/9M0i5IJM64eZa9EyZw==}
     engines: {node: '>=14.18'}
     dependencies:
       '@sanity/eventsource': 5.0.2
-      get-it: 8.4.29
+      get-it: 8.4.30
       rxjs: 7.8.1
     transitivePeerDependencies:
       - debug
@@ -3424,8 +3424,8 @@ packages:
       has-symbols: 1.0.3
       hasown: 2.0.2
 
-  /get-it@8.4.29:
-    resolution: {integrity: sha512-mUSJjmFTdCoVwvf4uj/pCOlaMt8x6OK1nirKcyI5KH7IMyt2h5UGsZGu9NjtRVUFPN0QumWlPqVmG1oFK4mkZQ==}
+  /get-it@8.4.30:
+    resolution: {integrity: sha512-pd361r0zg6zEMobLZQ77VYHgfcC3WBkTwhgZE0+TOkIWMU9406ejVdROxt73fqMZW70w32qxbCi5nAlAwtqABw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       decompress-response: 7.0.0
