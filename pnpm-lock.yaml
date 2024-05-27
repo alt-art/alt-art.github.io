@@ -24,8 +24,8 @@ dependencies:
     specifier: ^1.7.2
     version: 1.7.2
   framer-motion:
-    specifier: ^11.2.4
-    version: 11.2.4(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^11.2.6
+    version: 11.2.6(react-dom@18.2.0)(react@18.2.0)
   graphql:
     specifier: ^16.8.1
     version: 16.8.1
@@ -3350,8 +3350,8 @@ packages:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
     dev: true
 
-  /framer-motion@11.2.4(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-D+EXd0lspaZijv3BJhAcSsyGz+gnvoEdnf+QWkPZdhoFzbeX/2skrH9XSVFb0osgUnCajW8x1frjhLuKwa/Reg==}
+  /framer-motion@11.2.6(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-XUrjjBt57e5YoHQtjwc3eNchFBuHvIgN/cS8SC4oIaAn2J/0+bLanUxXizidJKZVeHJam/JrmMnPRjYMglVn5g==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
