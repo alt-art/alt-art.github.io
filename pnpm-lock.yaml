@@ -30,8 +30,8 @@ dependencies:
     specifier: ^16.8.1
     version: 16.8.1
   i18next:
-    specifier: ^23.11.4
-    version: 23.11.4
+    specifier: ^23.11.5
+    version: 23.11.5
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -43,7 +43,7 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   react-i18next:
     specifier: ^14.1.1
-    version: 14.1.1(i18next@23.11.4)(react-dom@18.2.0)(react@18.2.0)
+    version: 14.1.1(i18next@23.11.5)(react-dom@18.2.0)(react@18.2.0)
   react-image:
     specifier: ^4.1.0
     version: 4.1.0(@babel/runtime@7.24.0)(react-dom@18.2.0)(react@18.2.0)
@@ -3593,8 +3593,8 @@ packages:
       void-elements: 3.1.0
     dev: false
 
-  /i18next@23.11.4:
-    resolution: {integrity: sha512-CCUjtd5TfaCl+mLUzAA0uPSN+AVn4fP/kWCYt/hocPUwusTpMVczdrRyOBUwk6N05iH40qiKx6q1DoNJtBIwdg==}
+  /i18next@23.11.5:
+    resolution: {integrity: sha512-41pvpVbW9rhZPk5xjCX2TPJi2861LEig/YRhUkY+1FQ2IQPS0bKUDYnEqY8XPPbB48h1uIwLnP9iiEfuSl20CA==}
     dependencies:
       '@babel/runtime': 7.24.0
     dev: false
@@ -4524,7 +4524,7 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-i18next@14.1.1(i18next@23.11.4)(react-dom@18.2.0)(react@18.2.0):
+  /react-i18next@14.1.1(i18next@23.11.5)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-QSiKw+ihzJ/CIeIYWrarCmXJUySHDwQr5y8uaNIkbxoGRm/5DukkxZs+RPla79IKyyDPzC/DRlgQCABHtrQuQQ==}
     peerDependencies:
       i18next: '>= 23.2.3'
@@ -4539,7 +4539,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.24.0
       html-parse-stringify: 3.0.1
-      i18next: 23.11.4
+      i18next: 23.11.5
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
