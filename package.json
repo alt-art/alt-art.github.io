@@ -14,7 +14,7 @@
     "@apollo/client": "^3.10.4",
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
-    "@sanity/client": "^6.18.3",
+    "@sanity/client": "^6.21.0",
     "@sanity/image-url": "^1.0.2",
     "axios": "^1.7.2",
     "framer-motion": "^11.2.10",
