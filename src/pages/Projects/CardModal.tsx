@@ -47,7 +47,7 @@ function CardModal({
             href={githubLink}
             target="_blank"
             rel="noreferrer"
-            className=" w-full rounded-md border-2 border-white bg-white/10 p-4 text-center text-xl transition-colors duration-300 hover:border-primary hover:text-primary"
+            className="w-full rounded-md border-2 border-white bg-white/10 p-4 text-center text-xl transition-colors duration-300 hover:border-primary hover:text-primary"
           >
             GitHub
           </a>
