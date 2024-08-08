@@ -52,7 +52,6 @@ export function Slide(props: SlideProps): JSX.Element {
     if (!activeItem) {
       return;
     }
-    activeItem.getBoundingClientRect().width;
     const offset = (-activeIndex % elements.length) * getItemWidth(activeItem);
     void animateOuter.start({
       x: offset || 0,
