@@ -37,7 +37,7 @@ body {
   .animate-skeleton {
     animation: skeleton 1s linear infinite;
     background-color: #111213;
-    background: linear-gradient(110deg, #111213 25%, #ec8daf63 37%, #111213 63%);
+    background: linear-gradient(110deg, #111213 25%, #d4d4d463 37%, #111213 63%);
     background-size: 200%;
   }
 }
