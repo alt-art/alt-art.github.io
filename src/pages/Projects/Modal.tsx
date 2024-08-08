@@ -73,7 +73,7 @@ function Modal({ id }: { id: string }) {
         </button>
         {loading && (
           <SlideCenter modal>
-            <ReactLoading type="bars" color="#dd6387" height={50} width={50} />
+            <ReactLoading type="bars" height={50} width={50} />
           </SlideCenter>
         )}
         {data?.Project && <CardModal {...data.Project} />}

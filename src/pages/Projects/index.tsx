@@ -67,7 +67,7 @@ function Projects() {
       <div className="my-4 flex h-[404px] w-full items-center bg-black">
         {loading && (
           <SlideCenter>
-            <ReactLoading type="bars" color="#dd6387" height={50} width={50} />
+            <ReactLoading type="bars" height={50} width={50} />
           </SlideCenter>
         )}
         {data && <Slide elements={items} />}
