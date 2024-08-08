@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 
 function App(): JSX.Element {
   return (
-    <main>
+    <main className="bg-primary">
       <Background />
       <Intro />
       <ProjectsModalProvider>

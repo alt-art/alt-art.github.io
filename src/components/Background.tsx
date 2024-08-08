@@ -64,7 +64,7 @@ const angleSpeed = 0.001;
 const Background: React.FC = () => {
   return (
     <>
-      <div className="absolute z-[-10]">
+      <div className="absolute">
         <Draw
           onResize={(canvas) => {
             canvas.width = window.innerWidth - 10;
