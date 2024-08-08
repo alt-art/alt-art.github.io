@@ -33,8 +33,8 @@ importers:
         specifier: ^16.9.0
         version: 16.9.0
       i18next:
-        specifier: ^23.11.5
-        version: 23.11.5
+        specifier: ^23.12.2
+        version: 23.12.2
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -46,7 +46,7 @@ importers:
         version: 18.2.0(react@18.2.0)
       react-i18next:
         specifier: ^14.1.2
-        version: 14.1.2(i18next@23.11.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 14.1.2(i18next@23.12.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-image:
         specifier: ^4.1.0
         version: 4.1.0(@babel/runtime@7.24.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -1959,8 +1959,8 @@ packages:
   html-parse-stringify@3.0.1:
     resolution: {integrity: sha512-KknJ50kTInJ7qIScF3jeaFRpMpE8/lfiTdzf/twXyPBLAGrLRTmkz3AdTnKeh40X8k9L2fdYwEp/42WGXIRGcg==}
 
-  i18next@23.11.5:
-    resolution: {integrity: sha512-41pvpVbW9rhZPk5xjCX2TPJi2861LEig/YRhUkY+1FQ2IQPS0bKUDYnEqY8XPPbB48h1uIwLnP9iiEfuSl20CA==}
+  i18next@23.12.2:
+    resolution: {integrity: sha512-XIeh5V+bi8SJSWGL3jqbTEBW5oD6rbP5L+E7dVQh1MNTxxYef0x15rhJVcRb7oiuq4jLtgy2SD8eFlf6P2cmqg==}
 
   idb@7.1.1:
     resolution: {integrity: sha512-gchesWBzyvGHRO9W8tzUWFDycow5gwjvFKfyV9FF32Y7F50yZMp7mP+T2mJIWFx49zicqyC4uefHM17o6xKIVQ==}
@@ -5276,7 +5276,7 @@ snapshots:
     dependencies:
       void-elements: 3.1.0
 
-  i18next@23.11.5:
+  i18next@23.12.2:
     dependencies:
       '@babel/runtime': 7.24.0
 
@@ -5777,11 +5777,11 @@ snapshots:
       react: 18.2.0
       scheduler: 0.23.0
 
-  react-i18next@14.1.2(i18next@23.11.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  react-i18next@14.1.2(i18next@23.12.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@babel/runtime': 7.24.0
       html-parse-stringify: 3.0.1
-      i18next: 23.11.5
+      i18next: 23.12.2
       react: 18.2.0
     optionalDependencies:
       react-dom: 18.2.0(react@18.2.0)

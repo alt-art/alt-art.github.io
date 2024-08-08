@@ -19,7 +19,7 @@
     "axios": "^1.7.2",
     "framer-motion": "^11.3.12",
     "graphql": "^16.9.0",
-    "i18next": "^23.11.5",
+    "i18next": "^23.12.2",
     "react": "^18.2.0",
     "react-altdraw": "^1.0.3",
     "react-dom": "^18.2.0",
