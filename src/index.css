@@ -21,7 +21,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #111213;
   border-radius: 10px;
-  border: 2px solid #ec8daf;
+  border: 2px solid #ffffff;
 }
 
 @keyframes skeleton {
