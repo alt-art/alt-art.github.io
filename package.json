@@ -16,7 +16,7 @@
     "@mdi/react": "^1.6.1",
     "@sanity/client": "^6.21.3",
     "@sanity/image-url": "^1.1.0",
-    "axios": "^1.7.7",
+    "axios": "^1.8.2",
     "framer-motion": "^11.5.4",
     "graphql": "^16.9.0",
     "i18next": "^24.0.1",
