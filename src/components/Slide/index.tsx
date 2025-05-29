@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { JSX, ReactNode, useEffect, useState } from 'react';
 import { motion, useAnimationControls } from 'framer-motion';
 import SlideButton from './SlideButton';
 

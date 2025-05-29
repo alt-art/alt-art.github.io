@@ -1,5 +1,6 @@
 import { mdiEmail, mdiGithub, mdiLinkedin } from '@mdi/js';
 import Social from './Social';
+import { JSX } from 'react';
 
 export default function Footer(): JSX.Element {
   return (
