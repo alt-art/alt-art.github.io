@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
+import tailwindcss from '@tailwindcss/vite';
 import eslint from 'vite-plugin-eslint';
 
 // https://vitejs.dev/config/
@@ -20,7 +21,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react(), eslint()],
+  plugins: [react(), eslint(), tailwindcss()],
   define: {
     'globalThis.__DEV__': 'false',
   },

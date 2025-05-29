@@ -1,5 +1,4 @@
 import { useQuery, gql } from '@apollo/client';
-import ReactLoading from 'react-loading';
 import Title from '../../components/Title';
 import View from '../../components/View';
 import { ReactNode, useContext, useEffect, useState } from 'react';
@@ -11,6 +10,7 @@ import { AnimatePresence } from 'framer-motion';
 import Error from '../../components/Error';
 import SlideCenter from '../../components/SlideCenter';
 import { useTranslation } from 'react-i18next';
+import { Loading } from '../../components/Loading';
 
 const GET_PROJECTS = gql`
   query GetProjects {
@@ -67,7 +67,7 @@ function Projects() {
       <div className="my-4 flex h-[404px] w-full items-center bg-black">
         {loading && (
           <SlideCenter>
-            <ReactLoading type="bars" height={50} width={50} />
+            <Loading />
           </SlideCenter>
         )}
         {data && <Slide elements={items} />}

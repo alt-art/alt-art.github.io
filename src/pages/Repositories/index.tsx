@@ -1,6 +1,5 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { JSX, ReactNode, useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
-import ReactLoading from 'react-loading';
 import Title from '../../components/Title';
 import View from '../../components/View';
 import { getRepositories } from '../../utils/api';
@@ -9,6 +8,7 @@ import { Slide } from '../../components/Slide';
 import Error from '../../components/Error';
 import SlideCenter from '../../components/SlideCenter';
 import { useTranslation } from 'react-i18next';
+import { Loading } from '../../components/Loading';
 
 function Repositories(): JSX.Element {
   const [items, setItems] = useState<ReactNode[]>([]);
@@ -41,7 +41,7 @@ function Repositories(): JSX.Element {
         {status === 'success' && <Slide elements={items} />}
         {status === 'loading' && (
           <SlideCenter>
-            <ReactLoading type="bars" height={50} width={50} />
+            <Loading />
           </SlideCenter>
         )}
         {status === 'error' && (

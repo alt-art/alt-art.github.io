@@ -1,5 +1,5 @@
 import { Project } from '.';
-import { useContext } from 'react';
+import { JSX, useContext } from 'react';
 import { ProjectsModalContext } from '../../context/ProjectsModalProvider';
 import { urlFor } from '../../utils/sanity';
 import { Img } from 'react-image';

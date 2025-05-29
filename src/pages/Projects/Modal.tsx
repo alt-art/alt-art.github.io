@@ -1,7 +1,6 @@
 import { useContext, useEffect, useRef } from 'react';
 import { gql, useQuery } from '@apollo/client';
 import { motion } from 'framer-motion';
-import ReactLoading from 'react-loading';
 import { Icon } from '@mdi/react';
 import { mdiCloseCircle } from '@mdi/js';
 import { Project } from '.';
@@ -9,6 +8,7 @@ import { ProjectsModalContext } from '../../context/ProjectsModalProvider';
 import CardModal from './CardModal';
 import Error from '../../components/Error';
 import SlideCenter from '../../components/SlideCenter';
+import { Loading } from '../../components/Loading';
 
 const GET_PROJECT_BY_ID = gql`
   query GetProjectById($id: ID!) {
@@ -73,7 +73,7 @@ function Modal({ id }: { id: string }) {
         </button>
         {loading && (
           <SlideCenter modal>
-            <ReactLoading type="bars" height={50} width={50} />
+            <Loading />
           </SlideCenter>
         )}
         {data?.Project && <CardModal {...data.Project} />}
