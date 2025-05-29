@@ -3,7 +3,7 @@
 @theme {
   --color-black: #111213;
   --color-black-light: #292a2b;
-  --color-primary: var(--color-fuchsia-300);
+  --color-primary: var(--color-pink-300);
 }
 
 * {
