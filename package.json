@@ -17,7 +17,7 @@
     "@sanity/client": "7.3.0",
     "@sanity/image-url": "^1.1.0",
     "@tailwindcss/vite": "^4.1.8",
-    "axios": "^1.9.0",
+    "axios": "^1.12.2",
     "framer-motion": "12.15.0",
     "graphql": "^16.11.0",
     "i18next": "^25.2.1",
