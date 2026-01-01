@@ -3,7 +3,7 @@
 @theme {
   --color-black: #111213;
   --color-black-light: #292a2b;
-  --color-primary: var(--color-pink-300);
+  --color-primary: var(--color-purple-400);
 }
 
 * {
@@ -23,22 +23,4 @@ body {
   background-color: #111213;
   border-radius: 10px;
   border: 2px solid #ffffff;
-}
-
-@keyframes skeleton {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: -200%;
-  }  
-}
-
-@layer components {
-  .animate-skeleton {
-    animation: skeleton 1s linear infinite;
-    background-color: #111213;
-    background: linear-gradient(110deg, #111213 25%, #d4d4d463 37%, #111213 63%);
-    background-size: 200%;
-  }
 }

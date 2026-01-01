@@ -8,7 +8,7 @@ export default {
       colors: {
         black: '#111213',
         'black-light': '#292a2b',
-        primary: '#1a73e8',
+        primary: '#b45cf6',
       },
       width: {
         '404px': '404px',

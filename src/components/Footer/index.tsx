@@ -4,7 +4,7 @@ import { JSX } from 'react';
 
 export default function Footer(): JSX.Element {
   return (
-    <footer className="fixed inset-x-0 bottom-0 z-30 flex items-center justify-evenly p-2 text-base font-bold text-white/80 backdrop-blur-lg">
+    <footer className="fixed inset-x-0 bottom-0 z-30 flex items-center justify-evenly p-2 text-base font-bold text-purple-400 bg-black">
       <Social
         label="alt-art"
         icon={mdiGithub}

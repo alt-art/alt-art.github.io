@@ -10,7 +10,7 @@ interface Props {
 const Social: React.FC<Props> = ({ label, icon, link }: Props): JSX.Element => {
   return (
     <a
-      className="flex items-center border-b-2 border-white/30 px-2 py-1 text-white/80 transition-[border-color] duration-300 hover:border-white"
+      className="flex items-center border-b-2 px-2 py-1 transition-[border-color] duration-300 hover:border-yellow-400"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
